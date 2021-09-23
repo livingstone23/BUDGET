@@ -10,11 +10,16 @@ using System.Windows.Forms;
 
 namespace BUDGET.DESKTOP
 {
-    public partial class Form1 : Form
+    public partial class FrmCategoria : Form
     {
-        public Form1()
+        public FrmCategoria()
         {
             InitializeComponent();
+        }
+
+        private void cerrarFormulario_Click(object sender, EventArgs e)
+        {
+            Application.Exit();
         }
     }
 }
