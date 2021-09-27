@@ -52,16 +52,52 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FrmDashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmDashboard.Designer.cs">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmInitiative.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmInitiative.Designer.cs">
+      <DependentUpon>FrmInitiative.cs</DependentUpon>
+    </Compile>
     <Compile Include="FrmCategoria.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="FrmCategoria.Designer.cs">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
     </Compile>
+    <Compile Include="FrmPays.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPays.Designer.cs">
+      <DependentUpon>FrmPays.cs</DependentUpon>
+    </Compile>
+    <Compile Include="FrmPrincipal.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="FrmPrincipal.Designer.cs">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="FrmDashboard.resx">
+      <DependentUpon>FrmDashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmInitiative.resx">
+      <DependentUpon>FrmInitiative.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="FrmCategoria.resx">
       <DependentUpon>FrmCategoria.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPays.resx">
+      <DependentUpon>FrmPays.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="FrmPrincipal.resx">
+      <DependentUpon>FrmPrincipal.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -105,14 +141,20 @@
     <Content Include="Imagenes\CajaDescripcion.png" />
     <Content Include="Imagenes\CajaTexto.png" />
     <Content Include="Imagenes\CerrarForm.png" />
+    <Content Include="Imagenes\Compras Gris.png" />
+    <Content Include="Imagenes\Dashboard Gris.png" />
     <Content Include="Imagenes\Editar.png" />
     <Content Include="Imagenes\Eliminar.png" />
     <Content Include="Imagenes\Excel.png" />
+    <Content Include="Imagenes\Flecha.png" />
     <Content Include="Imagenes\FormularioBorde.png" />
+    <Content Include="Imagenes\Ganancias Gris.png" />
     <Content Include="Imagenes\Guardar.png" />
     <Content Include="Imagenes\Imprimir.png" />
     <Content Include="Imagenes\Nuevo.png" />
+    <Content Include="Imagenes\Productos Gris.png" />
     <Content Include="Imagenes\RhaegarCodeLogo.png" />
+    <Content Include="Imagenes\Salir.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -67,7 +67,7 @@ namespace BUDGET.DATA
             cmd.Parameters.AddWithValue("@DESCRIPCION", Categoria.Descripcioncategoria);
 
             cmd.ExecuteNonQuery();
-            conexion.Open();
+            conexion.Close();
         }
 
         public void EliminarCategoria(E_Categoria Categoria)
@@ -80,7 +80,7 @@ namespace BUDGET.DATA
             
 
             cmd.ExecuteNonQuery();
-            conexion.Open();
+            conexion.Close();
         }
 
     }

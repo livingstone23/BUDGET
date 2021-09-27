@@ -12,15 +12,15 @@ using System.Windows.Forms;
 
 namespace BUDGET.DESKTOP
 {
-    public partial class FrmCategoria : Form
+    public partial class FrmInitiative : Form
     {
-        private string idCategoria;
+        private string idInitiative;
         private bool Editarse = false;
 
-        E_Categoria objEntidad = new E_Categoria();
-        N_Categoria objNegocio = new N_Categoria();
+        E_Initiative objEntidad = new E_Initiative();
+        N_Initiative objNegocio = new N_Initiative();
 
-        public FrmCategoria()
+        public FrmInitiative()
         {
             InitializeComponent();
         }
@@ -33,22 +33,24 @@ namespace BUDGET.DESKTOP
         public void accionesTablas()
         {
             tablaCategoria.Columns[0].Visible =false;
-            tablaCategoria.Columns[1].Width = 70;
-            tablaCategoria.Columns[2].Width = 100;
+            tablaCategoria.Columns[2].Visible = false;
+            tablaCategoria.Columns[1].Width = 20;
+            //tablaCategoria.Columns[2].Width = 70;
 
             tablaCategoria.ClearSelection();
         }
 
-        private void FrmCategoria_Load(object sender, EventArgs e)
+        private void FrmInitiative_Load(object sender, EventArgs e)
         {
+            
             mostrarBuscarTabla("");
             accionesTablas();
         }
 
         public void mostrarBuscarTabla(string buscar)
         {
-            N_Categoria objNegocio = new N_Categoria();
-            tablaCategoria.DataSource = objNegocio.ListandoCategoria(buscar);
+            N_Initiative objNegocio = new N_Initiative();
+            tablaCategoria.DataSource = objNegocio.ListInitiative(buscar);
         }
 
         private void tablaCategoria_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -62,10 +64,10 @@ namespace BUDGET.DESKTOP
             {
                 try
                 {
-                    objEntidad.Nombrecategoria = txtNombre.Text.ToUpper();
-                    objEntidad.Descripcioncategoria = txtDescripcion.Text.ToUpper();
+                    objEntidad.InitiativeName = txtNombre.Text.ToUpper();
+                    objEntidad.InitiativeDescription = txtDescripcion.Text.ToUpper();
 
-                    objNegocio.InsertandoCategoria(objEntidad);
+                    objNegocio.InsertInitiative(objEntidad);
                     MessageBox.Show("Se guardo registro");
                     mostrarBuscarTabla("");
                     limpiarCajas();
@@ -81,11 +83,11 @@ namespace BUDGET.DESKTOP
             {
                 try
                 {
-                    objEntidad.Idcategoria = Convert.ToInt32(idCategoria);
-                    objEntidad.Nombrecategoria = txtNombre.Text.ToUpper();
-                    objEntidad.Descripcioncategoria = txtDescripcion.Text.ToUpper();
+                    objEntidad.IdInitiative = Convert.ToInt32(idInitiative);
+                    objEntidad.InitiativeName = txtNombre.Text.ToUpper();
+                    objEntidad.InitiativeDescription = txtDescripcion.Text.ToUpper();
 
-                    objNegocio.EditandoCategoria(objEntidad);
+                    objNegocio.EditInitiative(objEntidad);
                     MessageBox.Show("Se edito registro");
                     mostrarBuscarTabla("");
                     limpiarCajas();
@@ -107,7 +109,6 @@ namespace BUDGET.DESKTOP
         public void limpiarCajas()
         {
             Editarse = false;
-            txtCodigo.Text = "";
             txtNombre.Text = "";
             txtDescripcion.Text = "";
             txtNombre.Focus();
@@ -123,10 +124,9 @@ namespace BUDGET.DESKTOP
             if(tablaCategoria.SelectedRows.Count > 0)
             {
                 Editarse = true;
-                idCategoria = tablaCategoria.CurrentRow.Cells[0].Value.ToString();
-                txtCodigo.Text = tablaCategoria.CurrentRow.Cells[1].Value.ToString();
-                txtNombre.Text = tablaCategoria.CurrentRow.Cells[2].Value.ToString();
-                txtDescripcion.Text = tablaCategoria.CurrentRow.Cells[3].Value.ToString();
+                idInitiative = tablaCategoria.CurrentRow.Cells[0].Value.ToString();
+                txtNombre.Text = tablaCategoria.CurrentRow.Cells[1].Value.ToString();
+                txtDescripcion.Text = tablaCategoria.CurrentRow.Cells[2].Value.ToString();
                 
             }
             else
@@ -139,8 +139,8 @@ namespace BUDGET.DESKTOP
         {
             if(tablaCategoria.SelectedRows.Count > 0)
             {
-                objEntidad.Idcategoria =Convert.ToInt32(tablaCategoria.CurrentRow.Cells[0].Value.ToString());
-                objNegocio.EliminandoCategoria(objEntidad);
+                objEntidad.IdInitiative =Convert.ToInt32(tablaCategoria.CurrentRow.Cells[0].Value.ToString());
+                objNegocio.DeleteInitiative(objEntidad);
 
                 MessageBox.Show("Se elimino correctamente");
                 mostrarBuscarTabla("");
