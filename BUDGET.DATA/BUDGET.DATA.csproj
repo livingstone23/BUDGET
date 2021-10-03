@@ -42,6 +42,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="D_Budget.cs" />
     <Compile Include="D_Categoria.cs" />
     <Compile Include="D_Initiative.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

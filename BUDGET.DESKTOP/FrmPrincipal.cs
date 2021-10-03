@@ -48,7 +48,7 @@ namespace BUDGET.DESKTOP
             btnDashboard.Textcolor = Color.White;
             btnFrmInitiative.Textcolor = Color.White;
             btnProject.Textcolor = Color.White;
-            btnAccount.Textcolor = Color.White;
+            btnPOSReceived.Textcolor = Color.White;
 
             sender.selected = true;
             if (sender.selected)

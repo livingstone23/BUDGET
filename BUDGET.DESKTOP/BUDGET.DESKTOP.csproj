@@ -143,18 +143,23 @@
     <Content Include="Imagenes\CerrarForm.png" />
     <Content Include="Imagenes\Compras Gris.png" />
     <Content Include="Imagenes\Dashboard Gris.png" />
+    <Content Include="Imagenes\Dashboard Verde.png" />
     <Content Include="Imagenes\Editar.png" />
     <Content Include="Imagenes\Eliminar.png" />
     <Content Include="Imagenes\Excel.png" />
     <Content Include="Imagenes\Flecha.png" />
     <Content Include="Imagenes\FormularioBorde.png" />
     <Content Include="Imagenes\Ganancias Gris.png" />
+    <Content Include="Imagenes\Ganancinas Verde.png" />
     <Content Include="Imagenes\Guardar.png" />
     <Content Include="Imagenes\Imprimir.png" />
     <Content Include="Imagenes\Nuevo.png" />
     <Content Include="Imagenes\Productos Gris.png" />
+    <Content Include="Imagenes\Productos.png" />
     <Content Include="Imagenes\RhaegarCodeLogo.png" />
     <Content Include="Imagenes\Salir.png" />
+    <Content Include="Imagenes\SobraCajasTotales.png" />
+    <Content Include="Imagenes\SombraPanelProductos.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
