@@ -34,13 +34,63 @@ namespace BUDGET.DESKTOP
         public void accionesTAblas()
         {
             tablaBUDGET.Columns[0].Visible = false;
+
+
+            tablaBUDGET.Columns[1].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            
             tablaBUDGET.Columns[2].Visible = false;
+
+            tablaBUDGET.Columns[3].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleLeft;
+            
+
+
+
+            tablaBUDGET.Columns[4].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            tablaBUDGET.Columns[4].DefaultCellStyle.Format = "N2";
+
+            tablaBUDGET.Columns[5].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            tablaBUDGET.Columns[5].DefaultCellStyle.Format = "N2";
+
+            tablaBUDGET.Columns[6].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            tablaBUDGET.Columns[6].DefaultCellStyle.Format = "N2";
+
+            tablaBUDGET.Columns[7].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            tablaBUDGET.Columns[7].DefaultCellStyle.Format = "N2";
+
+            tablaBUDGET.Columns[8].DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleRight;
+            tablaBUDGET.Columns[8].DefaultCellStyle.Format = "N2";
+
 
             tablaBUDGET.ClearSelection();
         }
 
 
         private void FrmDashboard_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label6_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void tablaBUDGET_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton21_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void bunifuThinButton22_Click(object sender, EventArgs e)
         {
 
         }
