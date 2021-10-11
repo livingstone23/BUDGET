@@ -64,35 +64,17 @@ namespace BUDGET.DESKTOP
             tablaBUDGET.ClearSelection();
         }
 
-
-        private void FrmDashboard_Load(object sender, EventArgs e)
+        private void btnInitiative_Click(object sender, EventArgs e)
         {
+            FrmInitiative fini = new FrmInitiative();
+            fini.ShowDialog();
 
         }
 
-        private void label6_Click(object sender, EventArgs e)
+        private void btnPos_Click(object sender, EventArgs e)
         {
-
-        }
-
-        private void label7_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void tablaBUDGET_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
-
-        private void bunifuThinButton21_Click(object sender, EventArgs e)
-        {
-
-        }
-
-        private void bunifuThinButton22_Click(object sender, EventArgs e)
-        {
-
+            FrmPos fpos = new FrmPos();
+            fpos.ShowDialog();
         }
     }
 }
