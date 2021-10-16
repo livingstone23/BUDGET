@@ -42,11 +42,13 @@ namespace BUDGET.DESKTOP
             this.header = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.salir = new System.Windows.Forms.PictureBox();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.header.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salir)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -247,6 +249,7 @@ namespace BUDGET.DESKTOP
             // header
             // 
             this.header.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(244)))), ((int)(((byte)(243)))), ((int)(((byte)(239)))));
+            this.header.Controls.Add(this.btnMinimizar);
             this.header.Controls.Add(this.label1);
             this.header.Controls.Add(this.salir);
             this.header.Dock = System.Windows.Forms.DockStyle.Top;
@@ -278,6 +281,18 @@ namespace BUDGET.DESKTOP
             this.salir.TabStop = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1081, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(35, 35);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -299,6 +314,7 @@ namespace BUDGET.DESKTOP
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.salir)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -317,5 +333,6 @@ namespace BUDGET.DESKTOP
         private Bunifu.Framework.UI.BunifuFlatButton btnFrmInitiative;
         private Bunifu.Framework.UI.BunifuFlatButton btnDashboard;
         private System.Windows.Forms.PictureBox flecha;
+        private System.Windows.Forms.PictureBox btnMinimizar;
     }
 }

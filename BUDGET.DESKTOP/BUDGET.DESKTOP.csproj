@@ -177,6 +177,7 @@
     <Content Include="Imagenes\Ganancinas Verde.png" />
     <Content Include="Imagenes\Guardar.png" />
     <Content Include="Imagenes\Imprimir.png" />
+    <Content Include="Imagenes\minimize.png" />
     <Content Include="Imagenes\Nuevo.png" />
     <Content Include="Imagenes\Productos Gris.png" />
     <Content Include="Imagenes\Productos.png" />

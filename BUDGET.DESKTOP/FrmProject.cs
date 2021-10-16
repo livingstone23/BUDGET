@@ -194,11 +194,11 @@ namespace BUDGET.DESKTOP
                 List<int> ltIds = tablaBudget.AsEnumerable().Select(x => x.Field<int>("IdProject")).ToList();
                 if (ltIds.Contains(oEntidad.IdProject))
                 {
-                    MessageBox.Show("You cannot delete a project that already has an associated POS", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("A project with PO's associated can not be deleted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
                 else
                 {
-                    DialogResult result = MessageBox.Show($"Do you want delete {oEntidad.NameProject} Project? ", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+                    DialogResult result = MessageBox.Show($"Are you sure you want to delete {oEntidad.NameProject} Project? ", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
                     if (result == DialogResult.Yes)
                     {
                         oProject.EliminarProject(oEntidad);

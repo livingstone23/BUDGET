@@ -77,7 +77,7 @@ namespace BUDGET.DESKTOP
                     }
                     else
                     {
-                        MessageBox.Show($"{stBox} cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        MessageBox.Show($"{stBox} box cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
                     
     
