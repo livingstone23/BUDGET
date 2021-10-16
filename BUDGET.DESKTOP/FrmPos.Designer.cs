@@ -36,13 +36,13 @@ namespace BUDGET.DESKTOP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtDescription = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.pictureBox5 = new System.Windows.Forms.PictureBox();
+            this.picBoxDescription = new System.Windows.Forms.PictureBox();
             this.txtNumberTransfer = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxNumTransfer = new System.Windows.Forms.PictureBox();
             this.txtPayAmount = new System.Windows.Forms.TextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxAmount = new System.Windows.Forms.PictureBox();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
@@ -56,9 +56,9 @@ namespace BUDGET.DESKTOP
             this.TopFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxDescription)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNumTransfer)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -117,6 +117,7 @@ namespace BUDGET.DESKTOP
             this.txtDescription.Name = "txtDescription";
             this.txtDescription.Size = new System.Drawing.Size(336, 17);
             this.txtDescription.TabIndex = 27;
+            this.txtDescription.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtDescription_KeyPress);
             // 
             // label6
             // 
@@ -127,16 +128,16 @@ namespace BUDGET.DESKTOP
             this.label6.TabIndex = 26;
             this.label6.Text = "DESCRIPTION";
             // 
-            // pictureBox5
+            // picBoxDescription
             // 
-            this.pictureBox5.BackColor = System.Drawing.Color.White;
-            this.pictureBox5.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox5.Image")));
-            this.pictureBox5.Location = new System.Drawing.Point(34, 94);
-            this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(347, 34);
-            this.pictureBox5.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox5.TabIndex = 25;
-            this.pictureBox5.TabStop = false;
+            this.picBoxDescription.BackColor = System.Drawing.Color.White;
+            this.picBoxDescription.Image = ((System.Drawing.Image)(resources.GetObject("picBoxDescription.Image")));
+            this.picBoxDescription.Location = new System.Drawing.Point(34, 94);
+            this.picBoxDescription.Name = "picBoxDescription";
+            this.picBoxDescription.Size = new System.Drawing.Size(347, 34);
+            this.picBoxDescription.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picBoxDescription.TabIndex = 25;
+            this.picBoxDescription.TabStop = false;
             // 
             // txtNumberTransfer
             // 
@@ -146,6 +147,7 @@ namespace BUDGET.DESKTOP
             this.txtNumberTransfer.Name = "txtNumberTransfer";
             this.txtNumberTransfer.Size = new System.Drawing.Size(337, 17);
             this.txtNumberTransfer.TabIndex = 33;
+            this.txtNumberTransfer.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtNumerTransfer_keyPress);
             // 
             // label1
             // 
@@ -156,16 +158,16 @@ namespace BUDGET.DESKTOP
             this.label1.TabIndex = 32;
             this.label1.Text = "NUMBER TRANSFER";
             // 
-            // pictureBox3
+            // pictureBoxNumTransfer
             // 
-            this.pictureBox3.BackColor = System.Drawing.Color.White;
-            this.pictureBox3.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox3.Image")));
-            this.pictureBox3.Location = new System.Drawing.Point(34, 156);
-            this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(347, 34);
-            this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox3.TabIndex = 31;
-            this.pictureBox3.TabStop = false;
+            this.pictureBoxNumTransfer.BackColor = System.Drawing.Color.White;
+            this.pictureBoxNumTransfer.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxNumTransfer.Image")));
+            this.pictureBoxNumTransfer.Location = new System.Drawing.Point(34, 156);
+            this.pictureBoxNumTransfer.Name = "pictureBoxNumTransfer";
+            this.pictureBoxNumTransfer.Size = new System.Drawing.Size(347, 34);
+            this.pictureBoxNumTransfer.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxNumTransfer.TabIndex = 31;
+            this.pictureBoxNumTransfer.TabStop = false;
             // 
             // txtPayAmount
             // 
@@ -175,6 +177,7 @@ namespace BUDGET.DESKTOP
             this.txtPayAmount.Name = "txtPayAmount";
             this.txtPayAmount.Size = new System.Drawing.Size(336, 17);
             this.txtPayAmount.TabIndex = 36;
+            this.txtPayAmount.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtAmount_PressKey);
             // 
             // label4
             // 
@@ -185,16 +188,16 @@ namespace BUDGET.DESKTOP
             this.label4.TabIndex = 35;
             this.label4.Text = "PAY AMOUNT";
             // 
-            // pictureBox4
+            // pictureBoxAmount
             // 
-            this.pictureBox4.BackColor = System.Drawing.Color.White;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(34, 221);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(347, 34);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 34;
-            this.pictureBox4.TabStop = false;
+            this.pictureBoxAmount.BackColor = System.Drawing.Color.White;
+            this.pictureBoxAmount.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxAmount.Image")));
+            this.pictureBoxAmount.Location = new System.Drawing.Point(34, 221);
+            this.pictureBoxAmount.Name = "pictureBoxAmount";
+            this.pictureBoxAmount.Size = new System.Drawing.Size(347, 34);
+            this.pictureBoxAmount.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxAmount.TabIndex = 34;
+            this.pictureBoxAmount.TabStop = false;
             // 
             // label5
             // 
@@ -341,13 +344,13 @@ namespace BUDGET.DESKTOP
             this.Controls.Add(this.pictureBox6);
             this.Controls.Add(this.txtPayAmount);
             this.Controls.Add(this.label4);
-            this.Controls.Add(this.pictureBox4);
+            this.Controls.Add(this.pictureBoxAmount);
             this.Controls.Add(this.txtNumberTransfer);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.pictureBox3);
+            this.Controls.Add(this.pictureBoxNumTransfer);
             this.Controls.Add(this.txtDescription);
             this.Controls.Add(this.label6);
-            this.Controls.Add(this.pictureBox5);
+            this.Controls.Add(this.picBoxDescription);
             this.Controls.Add(this.TopFormulario);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "FrmPos";
@@ -357,9 +360,9 @@ namespace BUDGET.DESKTOP
             this.TopFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox5)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBoxDescription)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxNumTransfer)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
@@ -375,13 +378,13 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.TextBox txtDescription;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.PictureBox pictureBox5;
+        private System.Windows.Forms.PictureBox picBoxDescription;
         private System.Windows.Forms.TextBox txtNumberTransfer;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox pictureBoxNumTransfer;
         private System.Windows.Forms.TextBox txtPayAmount;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.PictureBox pictureBox4;
+        private System.Windows.Forms.PictureBox pictureBoxAmount;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;

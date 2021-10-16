@@ -24,6 +24,7 @@ namespace BUDGET.DESKTOP
             InitializeComponent();
             ListInitiative();
             ListProject();
+            ListPos();
         }
 
         private void cerrarFormulario_Click(object sender, EventArgs e)
@@ -33,22 +34,53 @@ namespace BUDGET.DESKTOP
 
         private void btnGuardar_Click(object sender, EventArgs e)
         {
+            bool bguardar = true;
+            string stBox = "";
             if(Update == false)
             {
                 try
                 {
-                    entities.PayDay = DateTime.Now.Date;
-                    entities.CurrencyPay = "EURO";
-                    entities.DescriptionPOS = txtDescription.Text;
-                    entities.NumberTransfer = txtNumberTransfer.Text;
-                    entities.PayAmount = Convert.ToDecimal(txtPayAmount.Text);
-                    entities.RateChange = 1;
-                    entities.IdInitiative = Convert.ToInt32(cmbInitiative.SelectedValue);
-                    entities.IdProject = Convert.ToInt32(cmbProject.SelectedValue);
-                    entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
+                    //Comprobamos que esté relleno los textbox necesarios
+                    if (txtDescription.Text == "")
+                    {
+                        bguardar = false;
+                        picBoxDescription.BackColor = Color.Red;
+                        stBox = "Description";
+                    }
+                    if (txtNumberTransfer.Text == "")
+                    {
+                        bguardar = false;
+                        pictureBoxNumTransfer.BackColor = Color.Red;
+                        stBox = "Transfer Number";
+                    }
+                    if (txtPayAmount.Text == "")
+                    {
+                        bguardar = false;
+                        pictureBoxAmount.BackColor = Color.Red;
+                        stBox = "Amount";
+                    }
 
-                    business.CreatingPOSPay(entities);
-                    MessageBox.Show("POS  GUARDADO");
+                    if (bguardar)
+                    {
+                        entities.PayDay = DateTime.Now.Date;
+                        entities.CurrencyPay = "EURO";
+                        entities.DescriptionPOS = txtDescription.Text;
+                        entities.NumberTransfer = txtNumberTransfer.Text;
+                        entities.PayAmount = Convert.ToDecimal(txtPayAmount.Text);
+                        entities.RateChange = 1;
+                        entities.IdInitiative = Convert.ToInt32(cmbInitiative.SelectedValue);
+                        entities.IdProject = Convert.ToInt32(cmbProject.SelectedValue);
+                        entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
+
+                        business.CreatingPOSPay(entities);
+                        MessageBox.Show("POS  GUARDADO");
+                    }
+                    else
+                    {
+                        MessageBox.Show($"{stBox} cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                    
+    
 
                 }
                 catch (Exception ex)
@@ -88,7 +120,41 @@ namespace BUDGET.DESKTOP
 
         public void ListPos()
         {
+            N_POSPay oPos = new N_POSPay();
+            cmbPos.DataSource = oPos.ListingPosPay();
+            cmbPos.ValueMember = "IdPOSPays";
+            cmbPos.DisplayMember = "DescriptionPOS";
+        }
 
+        private void txtAmount_PressKey(object sender, KeyPressEventArgs e)
+        {
+            LimpiarErrores();
+            if (!char.IsControl(e.KeyChar) && !char.IsDigit(e.KeyChar) && (e.KeyChar != '.'))
+            {
+                e.Handled = true;
+            }
+
+            // only allow one decimal point
+            if ((e.KeyChar == '.') && ((sender as TextBox).Text.IndexOf('.') > -1))
+            {
+                e.Handled = true;
+            }
+        }
+        private void LimpiarErrores()
+        {
+            pictureBoxNumTransfer.BackColor = Color.White;
+            picBoxDescription.BackColor = Color.White;
+            pictureBoxAmount.BackColor = Color.White;
+        }
+
+        private void txtDescription_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            LimpiarErrores();
+        }
+
+        private void txtNumerTransfer_keyPress(object sender, KeyPressEventArgs e)
+        {
+            LimpiarErrores();
         }
     }
 }
