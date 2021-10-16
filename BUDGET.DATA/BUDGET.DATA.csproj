@@ -45,6 +45,7 @@
     <Compile Include="D_Budget.cs" />
     <Compile Include="D_Categoria.cs" />
     <Compile Include="D_Initiative.cs" />
+    <Compile Include="D_POSPay.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
