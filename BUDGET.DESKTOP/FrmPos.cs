@@ -23,6 +23,7 @@ namespace BUDGET.DESKTOP
         {
             InitializeComponent();
             ListInitiative();
+            ListProject();
         }
 
         private void cerrarFormulario_Click(object sender, EventArgs e)
@@ -76,10 +77,13 @@ namespace BUDGET.DESKTOP
             cmbInitiative.DisplayMember = "InitiativeName";
 
         }
-
+   
         public void ListProject()
         {
-
+            N_Project oProject = new N_Project();
+            cmbProject.DataSource = oProject.ListandoProject("");
+            cmbProject.ValueMember = "IdProject";
+            cmbProject.DisplayMember = "NombreProject";
         }
 
         public void ListPos()

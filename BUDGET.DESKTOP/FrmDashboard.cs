@@ -27,8 +27,14 @@ namespace BUDGET.DESKTOP
         public void MostrarTablaBudget()
         {
             N_Budget objNegocio = new N_Budget();
+        
+
             tablaBUDGET.DataSource = objNegocio.ListandoBudget();
-            
+            tablaBUDGET.Columns[1].HeaderText = "Initiative";
+            tablaBUDGET.Columns[3].HeaderText = "Project";
+            tablaBUDGET.Columns[4].HeaderText = "Amount Invoice";
+            tablaBUDGET.Columns[8].HeaderText = "Final Balance";
+
         }
 
         public void accionesTAblas()
