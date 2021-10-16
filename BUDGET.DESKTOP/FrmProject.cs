@@ -15,24 +15,27 @@ namespace BUDGET.DESKTOP
     {
         private string idProject;
         private bool bEditarse = false;
+        
         E_Project oEntidad = new E_Project();
         N_Project oProject = new N_Project();
+        public bool Mostrar { get; set; }
         public FrmProject()
         {
             InitializeComponent();
-
-
         }
         private void FrmProject_Load(object sender, EventArgs e)
         {
-
+            
             ListarProject("");
+            
             RellenarCmbIniciativa();
             ConfigurarGrid();
 
         }
         public void ConfigurarGrid()
         {
+            cerrarFormulario.Visible = Mostrar;
+
             //Hacemos los headers visibles
             tablaProject.ColumnHeadersVisible = true;
             //configuramos los headers
@@ -54,7 +57,7 @@ namespace BUDGET.DESKTOP
         }
         private void cerrarFormulario_click(object sender, EventArgs e)
         {
-            Application.Exit();
+            this.Close();
         }
         private void ListarProject(string buscar)
         {
@@ -222,27 +225,28 @@ namespace BUDGET.DESKTOP
         {
             ListarProject(txtBuscar.Text);
         }
-        private void copyAlltoClipboard()
-        {
-            tablaProject.SelectAll();
-            DataObject dataObj = tablaProject.GetClipboardContent();
-            if (dataObj != null)
-                Clipboard.SetDataObject(dataObj);
-        }
+        //private void copyAlltoClipboard()
+        //{
+        //    tablaProject.SelectAll();
+        //    DataObject dataObj = tablaProject.GetClipboardContent();
+        //    if (dataObj != null)
+        //        Clipboard.SetDataObject(dataObj);
+        //}
         private void btnExportarExcel(object sender, EventArgs e)
         {
-            copyAlltoClipboard();
-            Microsoft.Office.Interop.Excel.Application xlexcel;
-            Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
-            Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
-            object misValue = System.Reflection.Missing.Value;
-            xlexcel = new Microsoft.Office.Interop.Excel.Application();
-            xlexcel.Visible = true;
-            xlWorkBook = xlexcel.Workbooks.Add(misValue);
-            xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
-            Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
-            CR.Select();
-            xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+            Utilidades.ExpExcel.Exportar(tablaProject);
+            //copyAlltoClipboard();
+            //Microsoft.Office.Interop.Excel.Application xlexcel;
+            //Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
+            //Microsoft.Office.Interop.Excel.Worksheet xlWorkSheet;
+            //object misValue = System.Reflection.Missing.Value;
+            //xlexcel = new Microsoft.Office.Interop.Excel.Application();
+            //xlexcel.Visible = true;
+            //xlWorkBook = xlexcel.Workbooks.Add(misValue);
+            //xlWorkSheet = (Microsoft.Office.Interop.Excel.Worksheet)xlWorkBook.Worksheets.get_Item(1);
+            //Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
+            //CR.Select();
+            //xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
         }
     }
 }

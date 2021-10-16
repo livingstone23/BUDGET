@@ -73,6 +73,7 @@ namespace BUDGET.DESKTOP
         private void btnInitiative_Click(object sender, EventArgs e)
         {
             FrmInitiative fini = new FrmInitiative();
+            fini.Mostrar = true;
             fini.ShowDialog();
 
         }
@@ -81,6 +82,20 @@ namespace BUDGET.DESKTOP
         {
             FrmPos fpos = new FrmPos();
             fpos.ShowDialog();
+        }
+
+        private void btnProject_Click(object sender, EventArgs e)
+        {
+            FrmProject fpro = new FrmProject();
+            fpro.Mostrar = true;
+            fpro.ShowDialog();
+
+        }
+
+        private void btnExportarExcel(object sender, EventArgs e)
+        {
+            Utilidades.ExpExcel.Exportar(tablaBUDGET);
+            
         }
     }
 }

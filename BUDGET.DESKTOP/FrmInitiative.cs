@@ -20,6 +20,7 @@ namespace BUDGET.DESKTOP
         E_Initiative objEntidad = new E_Initiative();
         N_Initiative objNegocio = new N_Initiative();
 
+        public bool Mostrar { get; set; }
         public FrmInitiative()
         {
             InitializeComponent();
@@ -45,6 +46,7 @@ namespace BUDGET.DESKTOP
             
             mostrarBuscarTabla("");
             accionesTablas();
+            cerrarFormulario.Visible = Mostrar;
         }
 
         public void mostrarBuscarTabla(string buscar)
@@ -149,6 +151,11 @@ namespace BUDGET.DESKTOP
             {
                 MessageBox.Show("Seleccione la fila que desea eliminar");
             }
+        }
+
+        private void bunifuFlatButton3_Click(object sender, EventArgs e)
+        {
+            Utilidades.ExpExcel.Exportar(tablaCategoria);
         }
     }
 }

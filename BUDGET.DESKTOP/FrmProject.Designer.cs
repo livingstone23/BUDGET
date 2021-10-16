@@ -57,6 +57,7 @@ namespace BUDGET.DESKTOP
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
+            this.cerrarFormulario = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -66,6 +67,7 @@ namespace BUDGET.DESKTOP
             this.TopFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             this.SuspendLayout();
             // 
             // doubleBitmapControl1
@@ -456,6 +458,7 @@ namespace BUDGET.DESKTOP
             // TopFormulario
             // 
             this.TopFormulario.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            this.TopFormulario.Controls.Add(this.cerrarFormulario);
             this.TopFormulario.Controls.Add(this.pictureBox1);
             this.TopFormulario.Controls.Add(this.label1);
             this.TopFormulario.Location = new System.Drawing.Point(0, 0);
@@ -495,6 +498,17 @@ namespace BUDGET.DESKTOP
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
+            // 
+            // cerrarFormulario
+            // 
+            this.cerrarFormulario.Image = ((System.Drawing.Image)(resources.GetObject("cerrarFormulario.Image")));
+            this.cerrarFormulario.Location = new System.Drawing.Point(855, 3);
+            this.cerrarFormulario.Name = "cerrarFormulario";
+            this.cerrarFormulario.Size = new System.Drawing.Size(38, 35);
+            this.cerrarFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cerrarFormulario.TabIndex = 53;
+            this.cerrarFormulario.TabStop = false;
+            this.cerrarFormulario.Click += new System.EventHandler(this.cerrarFormulario_click);
             // 
             // FrmProject
             // 
@@ -538,6 +552,7 @@ namespace BUDGET.DESKTOP
             this.TopFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -571,5 +586,6 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.PictureBox pictureBox3;
+        private System.Windows.Forms.PictureBox cerrarFormulario;
     }
 }

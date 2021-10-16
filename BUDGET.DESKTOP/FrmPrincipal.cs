@@ -31,13 +31,10 @@ namespace BUDGET.DESKTOP
         private void FrmPrincipal_Load(object sender, EventArgs e)
         {
             pantallaOk();
-#if DEBUG
-            AbrirFormulariosEnWrapper(new FrmPos());
 
-#else
+     
             AbrirFormulariosEnWrapper(new FrmDashboard());
 
-#endif
         }
 
         private void salir_Click(object sender, EventArgs e)

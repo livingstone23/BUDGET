@@ -472,6 +472,7 @@ namespace BUDGET.DESKTOP
             this.bunifuThinButton24.Size = new System.Drawing.Size(138, 41);
             this.bunifuThinButton24.TabIndex = 3;
             this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.btnExportarExcel);
             // 
             // btnProject
             // 
@@ -497,6 +498,7 @@ namespace BUDGET.DESKTOP
             this.btnProject.Size = new System.Drawing.Size(138, 41);
             this.btnProject.TabIndex = 2;
             this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
             // 
             // btnInitiative
             // 
