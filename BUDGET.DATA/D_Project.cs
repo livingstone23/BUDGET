@@ -38,6 +38,24 @@ namespace BUDGET.DATA
             LeerFilas.Close();
             return Listar;
         }
+        public List<E_Project> getProjectPorIdInitiative(string idInitiative)
+        {
+            List<E_Project> proyectos = new List<E_Project>();
+            SqlDataReader LeerFilas;
+            conexion.Open();
+            SqlCommand cmd = new SqlCommand($"SELECT * FROM Project where IdInitiative = {idInitiative}", conexion);
+            LeerFilas = cmd.ExecuteReader();
+            while (LeerFilas.Read())
+            {
+                proyectos.Add(new E_Project
+                {
+                    IdProject = LeerFilas.GetInt32(0),
+                    NameProject = LeerFilas.GetString(1),
+                                        
+                });
+            }
+            return proyectos;
+        }
         public int GetIdInitiative(string stNombre)
         {
             int iId;

@@ -31,6 +31,10 @@ namespace BUDGET.BUSINESS
         {
             oData.EliminarProject(oProject);
         }
+        public List<E_Project> getProyectoPorIniciativa(string idInitiative)
+        {
+          return  oData.getProjectPorIdInitiative(idInitiative);
+        }
         /// <summary>
         /// Devuelve true si un proyecto está asocaido a un POs
         /// </summary>

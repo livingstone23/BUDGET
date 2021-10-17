@@ -14,9 +14,9 @@ namespace BUDGET.BUSINESS
         D_POSPay data = new D_POSPay();
         E_POSPay entities = new E_POSPay();
 
-        public DataTable ListingPosPay()
+        public DataTable ListingPosPay(string buscar)
         {
-            return data.ListPOSPays();
+            return data.ListPOSPays(buscar);
         }
 
         public DataTable SearchingPOSPay(string search)

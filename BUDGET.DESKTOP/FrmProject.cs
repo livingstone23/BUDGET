@@ -3,12 +3,16 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUDGET.BUSINESS;
 using BUDGET.ENTITIES;
+using iTextSharp.text;
+using iTextSharp.text.pdf;
+
 namespace BUDGET.DESKTOP
 {
     public partial class FrmProject : Form
@@ -234,7 +238,7 @@ namespace BUDGET.DESKTOP
         //}
         private void btnExportarExcel(object sender, EventArgs e)
         {
-            Utilidades.ExpExcel.Exportar(tablaProject);
+            Utilidades.ExportarToFormat.ExportarXml(tablaProject);
             //copyAlltoClipboard();
             //Microsoft.Office.Interop.Excel.Application xlexcel;
             //Microsoft.Office.Interop.Excel.Workbook xlWorkBook;
@@ -247,6 +251,12 @@ namespace BUDGET.DESKTOP
             //Microsoft.Office.Interop.Excel.Range CR = (Microsoft.Office.Interop.Excel.Range)xlWorkSheet.Cells[1, 1];
             //CR.Select();
             //xlWorkSheet.PasteSpecial(CR, Type.Missing, Type.Missing, Type.Missing, Type.Missing, Type.Missing, true);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+
+            Utilidades.ExportarToFormat.ExportarPDF(tablaProject);
         }
     }
 }

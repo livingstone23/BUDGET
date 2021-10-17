@@ -14,6 +14,8 @@ namespace BUDGET.DESKTOP
     {
         public FrmPrincipal()
         {
+
+    
             InitializeComponent();
         }
 
@@ -86,6 +88,7 @@ namespace BUDGET.DESKTOP
         {
             SeleccionarBotones((Bunifu.Framework.UI.BunifuFlatButton)sender);
             seguirboton((Bunifu.Framework.UI.BunifuFlatButton)sender);
+            AbrirFormulariosEnWrapper(new FrmPays());
         }
 
         private Form formActivado = null;

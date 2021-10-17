@@ -155,7 +155,12 @@ namespace BUDGET.DESKTOP
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)
         {
-            Utilidades.ExpExcel.Exportar(tablaCategoria);
+            Utilidades.ExportarToFormat.ExportarXml(tablaCategoria);
+        }
+
+        private void bunifuFlatButton2_Click(object sender, EventArgs e)
+        {
+            Utilidades.ExportarToFormat.ExportarPDF(tablaCategoria);
         }
     }
 }

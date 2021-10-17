@@ -54,10 +54,10 @@ namespace BUDGET.DESKTOP
             this.pictureBox8 = new System.Windows.Forms.PictureBox();
             this.cmbIniciativa = new System.Windows.Forms.ComboBox();
             this.TopFormulario = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             this.cerrarFormulario = new System.Windows.Forms.PictureBox();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.pictureBox3 = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.tablaProject)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
@@ -65,9 +65,9 @@ namespace BUDGET.DESKTOP
             ((System.ComponentModel.ISupportInitialize)(this.picBoxAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
             this.TopFormulario.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             this.SuspendLayout();
             // 
             // doubleBitmapControl1
@@ -281,6 +281,7 @@ namespace BUDGET.DESKTOP
             this.bunifuFlatButton2.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             this.bunifuFlatButton2.Textcolor = System.Drawing.Color.White;
             this.bunifuFlatButton2.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuFlatButton2.Click += new System.EventHandler(this.bunifuFlatButton2_Click);
             // 
             // bunifuFlatButton3
             // 
@@ -466,6 +467,27 @@ namespace BUDGET.DESKTOP
             this.TopFormulario.Size = new System.Drawing.Size(904, 46);
             this.TopFormulario.TabIndex = 51;
             // 
+            // cerrarFormulario
+            // 
+            this.cerrarFormulario.Image = ((System.Drawing.Image)(resources.GetObject("cerrarFormulario.Image")));
+            this.cerrarFormulario.Location = new System.Drawing.Point(855, 3);
+            this.cerrarFormulario.Name = "cerrarFormulario";
+            this.cerrarFormulario.Size = new System.Drawing.Size(38, 35);
+            this.cerrarFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.cerrarFormulario.TabIndex = 53;
+            this.cerrarFormulario.TabStop = false;
+            this.cerrarFormulario.Click += new System.EventHandler(this.cerrarFormulario_click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
+            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(44, 35);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox1.TabIndex = 52;
+            this.pictureBox1.TabStop = false;
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -478,16 +500,6 @@ namespace BUDGET.DESKTOP
             this.label1.TabIndex = 3;
             this.label1.Text = "Project";
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(6, 3);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(44, 35);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox1.TabIndex = 52;
-            this.pictureBox1.TabStop = false;
-            // 
             // pictureBox3
             // 
             this.pictureBox3.BackColor = System.Drawing.SystemColors.ControlLightLight;
@@ -498,17 +510,6 @@ namespace BUDGET.DESKTOP
             this.pictureBox3.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox3.TabIndex = 53;
             this.pictureBox3.TabStop = false;
-            // 
-            // cerrarFormulario
-            // 
-            this.cerrarFormulario.Image = ((System.Drawing.Image)(resources.GetObject("cerrarFormulario.Image")));
-            this.cerrarFormulario.Location = new System.Drawing.Point(855, 3);
-            this.cerrarFormulario.Name = "cerrarFormulario";
-            this.cerrarFormulario.Size = new System.Drawing.Size(38, 35);
-            this.cerrarFormulario.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.cerrarFormulario.TabIndex = 53;
-            this.cerrarFormulario.TabStop = false;
-            this.cerrarFormulario.Click += new System.EventHandler(this.cerrarFormulario_click);
             // 
             // FrmProject
             // 
@@ -550,9 +551,9 @@ namespace BUDGET.DESKTOP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
             this.TopFormulario.ResumeLayout(false);
             this.TopFormulario.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 

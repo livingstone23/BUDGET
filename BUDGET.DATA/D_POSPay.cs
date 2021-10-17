@@ -15,7 +15,7 @@ namespace BUDGET.DATA
         SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar4"].ConnectionString);
    
     
-        public DataTable ListPOSPays()
+        public DataTable ListPOSPays(string buscar)
         {
             DataTable table = new DataTable();
             SqlDataReader readRows;
@@ -23,6 +23,7 @@ namespace BUDGET.DATA
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
+            cmd.Parameters.AddWithValue("@BUSCAR", buscar);
             readRows = cmd.ExecuteReader();
             table.Load(readRows);
 

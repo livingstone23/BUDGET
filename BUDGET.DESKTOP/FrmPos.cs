@@ -23,7 +23,7 @@ namespace BUDGET.DESKTOP
         {
             InitializeComponent();
             ListInitiative();
-            ListProject();
+           // ListProject();
             ListPos();
         }
 
@@ -110,18 +110,19 @@ namespace BUDGET.DESKTOP
 
         }
    
-        public void ListProject()
+        public void ListProject(string idInitiative)
         {
             N_Project oProject = new N_Project();
-            cmbProject.DataSource = oProject.ListandoProject("");
+            //cmbProject.DataSource = oProject.ListandoProject("");
+            cmbProject.DataSource = oProject.getProyectoPorIniciativa(idInitiative);
             cmbProject.ValueMember = "IdProject";
-            cmbProject.DisplayMember = "NombreProject";
+            cmbProject.DisplayMember = "NameProject";
         }
 
         public void ListPos()
         {
             N_POSPay oPos = new N_POSPay();
-            cmbPos.DataSource = oPos.ListingPosPay();
+            cmbPos.DataSource = oPos.ListingPosPay("");
             cmbPos.ValueMember = "IdPOSPays";
             cmbPos.DisplayMember = "DescriptionPOS";
         }
@@ -155,6 +156,13 @@ namespace BUDGET.DESKTOP
         private void txtNumerTransfer_keyPress(object sender, KeyPressEventArgs e)
         {
             LimpiarErrores();
+        }
+
+        private void cmbInitiative_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            //actualizamos combobox proyectos
+            E_Initiative oIni = (E_Initiative)cmbInitiative.SelectedItem;
+            ListProject(oIni.IdInitiative.ToString());
         }
     }
 }

@@ -94,8 +94,13 @@ namespace BUDGET.DESKTOP
 
         private void btnExportarExcel(object sender, EventArgs e)
         {
-            Utilidades.ExpExcel.Exportar(tablaBUDGET);
+            Utilidades.ExportarToFormat.ExportarXml(tablaBUDGET);
             
+        }
+
+        private void bunifuThinButton25_Click(object sender, EventArgs e)
+        {
+            Utilidades.ExportarToFormat.ExportarPDF(tablaBUDGET);
         }
     }
 }

@@ -304,6 +304,7 @@ namespace BUDGET.DESKTOP
             this.cmbInitiative.Name = "cmbInitiative";
             this.cmbInitiative.Size = new System.Drawing.Size(341, 21);
             this.cmbInitiative.TabIndex = 47;
+            this.cmbInitiative.SelectedIndexChanged += new System.EventHandler(this.cmbInitiative_SelectedIndexChanged);
             // 
             // cmbProject
             // 
