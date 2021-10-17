@@ -47,12 +47,12 @@ namespace BUDGET.DESKTOP
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
             this.label7 = new System.Windows.Forms.Label();
             this.pictureBox7 = new System.Windows.Forms.PictureBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.pictureBox8 = new System.Windows.Forms.PictureBox();
+            this.pictureBoxPos = new System.Windows.Forms.PictureBox();
             this.btnGuardar = new Bunifu.Framework.UI.BunifuFlatButton();
             this.cmbInitiative = new System.Windows.Forms.ComboBox();
             this.cmbProject = new System.Windows.Forms.ComboBox();
             this.cmbPos = new System.Windows.Forms.ComboBox();
+            this.chkPos = new System.Windows.Forms.CheckBox();
             this.TopFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -61,7 +61,7 @@ namespace BUDGET.DESKTOP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAmount)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPos)).BeginInit();
             this.SuspendLayout();
             // 
             // TopFormulario
@@ -239,25 +239,16 @@ namespace BUDGET.DESKTOP
             this.pictureBox7.TabIndex = 40;
             this.pictureBox7.TabStop = false;
             // 
-            // label8
+            // pictureBoxPos
             // 
-            this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(31, 410);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(105, 13);
-            this.label8.TabIndex = 44;
-            this.label8.Text = "POS ADJUSTMENT";
-            // 
-            // pictureBox8
-            // 
-            this.pictureBox8.BackColor = System.Drawing.Color.White;
-            this.pictureBox8.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox8.Image")));
-            this.pictureBox8.Location = new System.Drawing.Point(34, 426);
-            this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(347, 34);
-            this.pictureBox8.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox8.TabIndex = 43;
-            this.pictureBox8.TabStop = false;
+            this.pictureBoxPos.BackColor = System.Drawing.Color.White;
+            this.pictureBoxPos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPos.Image")));
+            this.pictureBoxPos.Location = new System.Drawing.Point(34, 426);
+            this.pictureBoxPos.Name = "pictureBoxPos";
+            this.pictureBoxPos.Size = new System.Drawing.Size(347, 34);
+            this.pictureBoxPos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBoxPos.TabIndex = 43;
+            this.pictureBoxPos.TabStop = false;
             // 
             // btnGuardar
             // 
@@ -328,17 +319,28 @@ namespace BUDGET.DESKTOP
             this.cmbPos.Size = new System.Drawing.Size(342, 21);
             this.cmbPos.TabIndex = 49;
             // 
+            // chkPos
+            // 
+            this.chkPos.AutoSize = true;
+            this.chkPos.Location = new System.Drawing.Point(34, 403);
+            this.chkPos.Name = "chkPos";
+            this.chkPos.Size = new System.Drawing.Size(124, 17);
+            this.chkPos.TabIndex = 50;
+            this.chkPos.Text = "POS ADJUSTMENT";
+            this.chkPos.UseVisualStyleBackColor = true;
+            this.chkPos.CheckedChanged += new System.EventHandler(this.chkPos_CheckedChanged);
+            // 
             // FrmPos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(419, 516);
+            this.Controls.Add(this.chkPos);
             this.Controls.Add(this.cmbPos);
             this.Controls.Add(this.cmbProject);
             this.Controls.Add(this.cmbInitiative);
             this.Controls.Add(this.btnGuardar);
-            this.Controls.Add(this.label8);
-            this.Controls.Add(this.pictureBox8);
+            this.Controls.Add(this.pictureBoxPos);
             this.Controls.Add(this.label7);
             this.Controls.Add(this.pictureBox7);
             this.Controls.Add(this.label5);
@@ -357,6 +359,7 @@ namespace BUDGET.DESKTOP
             this.Name = "FrmPos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Pays";
+            this.Load += new System.EventHandler(this.FrmPos_Load);
             this.TopFormulario.ResumeLayout(false);
             this.TopFormulario.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).EndInit();
@@ -366,7 +369,7 @@ namespace BUDGET.DESKTOP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBoxAmount)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox7)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBoxPos)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -390,11 +393,11 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.PictureBox pictureBox6;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.PictureBox pictureBox7;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.PictureBox pictureBox8;
+        private System.Windows.Forms.PictureBox pictureBoxPos;
         private Bunifu.Framework.UI.BunifuFlatButton btnGuardar;
         private System.Windows.Forms.ComboBox cmbInitiative;
         private System.Windows.Forms.ComboBox cmbProject;
         private System.Windows.Forms.ComboBox cmbPos;
+        private System.Windows.Forms.CheckBox chkPos;
     }
 }

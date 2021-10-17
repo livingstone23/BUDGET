@@ -14,19 +14,32 @@ namespace BUDGET.DESKTOP
 {
     public partial class FrmPos : Form
     {
-        E_POSPay entities = new E_POSPay();
+       
         N_POSPay business = new N_POSPay();
 
         public bool Update = false;
+        private bool _pChecked;
+        private bool PosChecked
+        {
+          get;set;
+        }
+
 
         public FrmPos()
         {
             InitializeComponent();
-            ListInitiative();
-           // ListProject();
-            ListPos();
+         
         }
-
+        private void FrmPos_Load(object sender, EventArgs e)
+        {
+            ListInitiative();
+            // ListProject();
+            ListPos();
+            PosChecked = false;
+            chkPos.Checked = PosChecked;
+            pictureBoxPos.Visible = false;
+            cmbPos.Visible = false;
+        }
         private void cerrarFormulario_Click(object sender, EventArgs e)
         {
             this.Close();
@@ -62,6 +75,7 @@ namespace BUDGET.DESKTOP
 
                     if (bguardar)
                     {
+                        E_POSPay entities = new E_POSPay();
                         entities.PayDay = DateTime.Now.Date;
                         entities.CurrencyPay = "EURO";
                         entities.DescriptionPOS = txtDescription.Text;
@@ -70,7 +84,10 @@ namespace BUDGET.DESKTOP
                         entities.RateChange = 1;
                         entities.IdInitiative = Convert.ToInt32(cmbInitiative.SelectedValue);
                         entities.IdProject = Convert.ToInt32(cmbProject.SelectedValue);
-                        entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
+                        if (PosChecked)
+                        {
+                            entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
+                        }
 
                         business.CreatingPOSPay(entities);
                         MessageBox.Show("POS  GUARDADO");
@@ -163,6 +180,22 @@ namespace BUDGET.DESKTOP
             //actualizamos combobox proyectos
             E_Initiative oIni = (E_Initiative)cmbInitiative.SelectedItem;
             ListProject(oIni.IdInitiative.ToString());
+        }
+
+        private void chkPos_CheckedChanged(object sender, EventArgs e)
+        {
+            if (chkPos.Checked)
+            {
+                PosChecked = true;
+                pictureBoxPos.Visible = true;
+                cmbPos.Visible = true;
+            }
+            else
+            {
+                PosChecked = false;
+                pictureBoxPos.Visible = false;
+                cmbPos.Visible = false;
+            }
         }
     }
 }
