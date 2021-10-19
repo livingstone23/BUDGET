@@ -10,8 +10,8 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using BUDGET.BUSINESS;
 using BUDGET.ENTITIES;
-using iTextSharp.text;
-using iTextSharp.text.pdf;
+//using iTextSharp.text;
+//using iTextSharp.text.pdf;
 
 namespace BUDGET.DESKTOP
 {

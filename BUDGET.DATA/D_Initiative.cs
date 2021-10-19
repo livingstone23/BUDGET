@@ -11,7 +11,7 @@ namespace BUDGET.DATA
 {
     public class D_Initiative
     {
-        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar4"].ConnectionString);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar3"].ConnectionString);
 
 
         public List<E_Initiative> ListInitiative(string search)

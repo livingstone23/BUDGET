@@ -87,7 +87,7 @@ namespace BUDGET.DESKTOP
                         if (PosChecked)
                         {
                             entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
-                        }
+                        } 
 
                         business.CreatingPOSPay(entities);
                         MessageBox.Show("POS  GUARDADO");

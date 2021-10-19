@@ -11,7 +11,7 @@ namespace BUDGET.DATA
 {
     public class D_Categoria
     {
-        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar4"].ConnectionString);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar3"].ConnectionString);
 
 
         public List<E_Categoria> ListaCategoria(string buscar)
