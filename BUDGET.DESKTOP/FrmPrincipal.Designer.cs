@@ -33,22 +33,20 @@ namespace BUDGET.DESKTOP
             this.sidebar = new System.Windows.Forms.Panel();
             this.flecha = new System.Windows.Forms.PictureBox();
             this.btnPOSReceived = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnProject = new Bunifu.Framework.UI.BunifuFlatButton();
-            this.btnFrmInitiative = new Bunifu.Framework.UI.BunifuFlatButton();
             this.btnDashboard = new Bunifu.Framework.UI.BunifuFlatButton();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.label2 = new System.Windows.Forms.Label();
             this.Wrapper = new System.Windows.Forms.Panel();
             this.header = new System.Windows.Forms.Panel();
+            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.label1 = new System.Windows.Forms.Label();
             this.salir = new System.Windows.Forms.PictureBox();
-            this.btnMinimizar = new System.Windows.Forms.PictureBox();
             this.sidebar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.flecha)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.header.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salir)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salir)).BeginInit();
             this.SuspendLayout();
             // 
             // sidebar
@@ -56,8 +54,6 @@ namespace BUDGET.DESKTOP
             this.sidebar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(33)))), ((int)(((byte)(33)))), ((int)(((byte)(32)))));
             this.sidebar.Controls.Add(this.flecha);
             this.sidebar.Controls.Add(this.btnPOSReceived);
-            this.sidebar.Controls.Add(this.btnProject);
-            this.sidebar.Controls.Add(this.btnFrmInitiative);
             this.sidebar.Controls.Add(this.btnDashboard);
             this.sidebar.Controls.Add(this.pictureBox1);
             this.sidebar.Controls.Add(this.label2);
@@ -98,7 +94,7 @@ namespace BUDGET.DESKTOP
             this.btnPOSReceived.IconVisible = true;
             this.btnPOSReceived.IconZoom = 65D;
             this.btnPOSReceived.IsTab = true;
-            this.btnPOSReceived.Location = new System.Drawing.Point(24, 332);
+            this.btnPOSReceived.Location = new System.Drawing.Point(24, 174);
             this.btnPOSReceived.Name = "btnPOSReceived";
             this.btnPOSReceived.Normalcolor = System.Drawing.Color.Transparent;
             this.btnPOSReceived.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(195)))), ((int)(((byte)(140)))));
@@ -111,76 +107,6 @@ namespace BUDGET.DESKTOP
             this.btnPOSReceived.Textcolor = System.Drawing.Color.White;
             this.btnPOSReceived.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPOSReceived.Click += new System.EventHandler(this.btnAccount_Click);
-            // 
-            // btnProject
-            // 
-            this.btnProject.Activecolor = System.Drawing.Color.Transparent;
-            this.btnProject.BackColor = System.Drawing.Color.Transparent;
-            this.btnProject.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnProject.BorderRadius = 0;
-            this.btnProject.ButtonText = "   PROJECT";
-            this.btnProject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProject.DisabledColor = System.Drawing.Color.Gray;
-            this.btnProject.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnProject.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnProject.Iconimage")));
-            this.btnProject.Iconimage_right = null;
-            this.btnProject.Iconimage_right_Selected = null;
-            this.btnProject.Iconimage_Selected = null;
-            this.btnProject.IconMarginLeft = 0;
-            this.btnProject.IconMarginRight = 0;
-            this.btnProject.IconRightVisible = true;
-            this.btnProject.IconRightZoom = 0D;
-            this.btnProject.IconVisible = true;
-            this.btnProject.IconZoom = 65D;
-            this.btnProject.IsTab = true;
-            this.btnProject.Location = new System.Drawing.Point(24, 259);
-            this.btnProject.Name = "btnProject";
-            this.btnProject.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnProject.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(195)))), ((int)(((byte)(140)))));
-            this.btnProject.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnProject.selected = false;
-            this.btnProject.Size = new System.Drawing.Size(223, 40);
-            this.btnProject.TabIndex = 4;
-            this.btnProject.Text = "   PROJECT";
-            this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProject.Textcolor = System.Drawing.Color.White;
-            this.btnProject.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
-            // 
-            // btnFrmInitiative
-            // 
-            this.btnFrmInitiative.Activecolor = System.Drawing.Color.Transparent;
-            this.btnFrmInitiative.BackColor = System.Drawing.Color.Transparent;
-            this.btnFrmInitiative.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.btnFrmInitiative.BorderRadius = 0;
-            this.btnFrmInitiative.ButtonText = "   INITIATIVE";
-            this.btnFrmInitiative.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnFrmInitiative.DisabledColor = System.Drawing.Color.Gray;
-            this.btnFrmInitiative.Iconcolor = System.Drawing.Color.Transparent;
-            this.btnFrmInitiative.Iconimage = ((System.Drawing.Image)(resources.GetObject("btnFrmInitiative.Iconimage")));
-            this.btnFrmInitiative.Iconimage_right = null;
-            this.btnFrmInitiative.Iconimage_right_Selected = null;
-            this.btnFrmInitiative.Iconimage_Selected = null;
-            this.btnFrmInitiative.IconMarginLeft = 0;
-            this.btnFrmInitiative.IconMarginRight = 0;
-            this.btnFrmInitiative.IconRightVisible = true;
-            this.btnFrmInitiative.IconRightZoom = 0D;
-            this.btnFrmInitiative.IconVisible = true;
-            this.btnFrmInitiative.IconZoom = 65D;
-            this.btnFrmInitiative.IsTab = true;
-            this.btnFrmInitiative.Location = new System.Drawing.Point(24, 183);
-            this.btnFrmInitiative.Name = "btnFrmInitiative";
-            this.btnFrmInitiative.Normalcolor = System.Drawing.Color.Transparent;
-            this.btnFrmInitiative.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(98)))), ((int)(((byte)(195)))), ((int)(((byte)(140)))));
-            this.btnFrmInitiative.OnHoverTextColor = System.Drawing.Color.White;
-            this.btnFrmInitiative.selected = false;
-            this.btnFrmInitiative.Size = new System.Drawing.Size(223, 40);
-            this.btnFrmInitiative.TabIndex = 3;
-            this.btnFrmInitiative.Text = "   INITIATIVE";
-            this.btnFrmInitiative.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnFrmInitiative.Textcolor = System.Drawing.Color.White;
-            this.btnFrmInitiative.TextFont = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnFrmInitiative.Click += new System.EventHandler(this.btnFrmInitiative_Click);
             // 
             // btnDashboard
             // 
@@ -259,6 +185,18 @@ namespace BUDGET.DESKTOP
             this.header.TabIndex = 2;
             this.header.Paint += new System.Windows.Forms.PaintEventHandler(this.header_Paint);
             // 
+            // btnMinimizar
+            // 
+            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
+            this.btnMinimizar.Location = new System.Drawing.Point(1081, 12);
+            this.btnMinimizar.Name = "btnMinimizar";
+            this.btnMinimizar.Size = new System.Drawing.Size(35, 35);
+            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.btnMinimizar.TabIndex = 2;
+            this.btnMinimizar.TabStop = false;
+            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
+            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -281,18 +219,6 @@ namespace BUDGET.DESKTOP
             this.salir.TabStop = false;
             this.salir.Click += new System.EventHandler(this.salir_Click);
             // 
-            // btnMinimizar
-            // 
-            this.btnMinimizar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnMinimizar.Image = ((System.Drawing.Image)(resources.GetObject("btnMinimizar.Image")));
-            this.btnMinimizar.Location = new System.Drawing.Point(1081, 12);
-            this.btnMinimizar.Name = "btnMinimizar";
-            this.btnMinimizar.Size = new System.Drawing.Size(35, 35);
-            this.btnMinimizar.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.btnMinimizar.TabIndex = 2;
-            this.btnMinimizar.TabStop = false;
-            this.btnMinimizar.Click += new System.EventHandler(this.btnMinimizar_Click);
-            // 
             // FrmPrincipal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -313,8 +239,8 @@ namespace BUDGET.DESKTOP
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.header.ResumeLayout(false);
             this.header.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.salir)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.btnMinimizar)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.salir)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -329,8 +255,6 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.PictureBox pictureBox1;
         private System.Windows.Forms.Label label2;
         private Bunifu.Framework.UI.BunifuFlatButton btnPOSReceived;
-        private Bunifu.Framework.UI.BunifuFlatButton btnProject;
-        private Bunifu.Framework.UI.BunifuFlatButton btnFrmInitiative;
         private Bunifu.Framework.UI.BunifuFlatButton btnDashboard;
         private System.Windows.Forms.PictureBox flecha;
         private System.Windows.Forms.PictureBox btnMinimizar;

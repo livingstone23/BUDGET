@@ -76,7 +76,7 @@ namespace BUDGET.DESKTOP
                     if (bguardar)
                     {
                         E_POSPay entities = new E_POSPay();
-                        entities.PayDay = DateTime.Now.Date;
+                        entities.PayDay = dtFecha.Value;
                         entities.CurrencyPay = "EURO";
                         entities.DescriptionPOS = txtDescription.Text;
                         entities.NumberTransfer = txtNumberTransfer.Text;
@@ -197,5 +197,6 @@ namespace BUDGET.DESKTOP
                 cmbPos.Visible = false;
             }
         }
+             
     }
 }

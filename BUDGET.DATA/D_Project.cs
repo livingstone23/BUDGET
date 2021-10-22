@@ -12,7 +12,7 @@ namespace BUDGET.DATA
 {
     public class D_Project
     {
-        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar4"].ConnectionString);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["BUDGET.DESKTOP.Properties.Settings.FinanceDBConnectionString"].ConnectionString);
         public List<E_ProjectJoinInitiative> ListarProjects(string buscar)
         {
             SqlDataReader LeerFilas;

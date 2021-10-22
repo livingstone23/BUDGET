@@ -53,6 +53,8 @@ namespace BUDGET.DESKTOP
             this.cmbProject = new System.Windows.Forms.ComboBox();
             this.cmbPos = new System.Windows.Forms.ComboBox();
             this.chkPos = new System.Windows.Forms.CheckBox();
+            this.label3 = new System.Windows.Forms.Label();
+            this.dtFecha = new System.Windows.Forms.DateTimePicker();
             this.TopFormulario.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.cerrarFormulario)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
@@ -243,7 +245,7 @@ namespace BUDGET.DESKTOP
             // 
             this.pictureBoxPos.BackColor = System.Drawing.Color.White;
             this.pictureBoxPos.Image = ((System.Drawing.Image)(resources.GetObject("pictureBoxPos.Image")));
-            this.pictureBoxPos.Location = new System.Drawing.Point(34, 426);
+            this.pictureBoxPos.Location = new System.Drawing.Point(34, 475);
             this.pictureBoxPos.Name = "pictureBoxPos";
             this.pictureBoxPos.Size = new System.Drawing.Size(347, 34);
             this.pictureBoxPos.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -271,7 +273,7 @@ namespace BUDGET.DESKTOP
             this.btnGuardar.IconVisible = true;
             this.btnGuardar.IconZoom = 45D;
             this.btnGuardar.IsTab = false;
-            this.btnGuardar.Location = new System.Drawing.Point(76, 475);
+            this.btnGuardar.Location = new System.Drawing.Point(76, 524);
             this.btnGuardar.Name = "btnGuardar";
             this.btnGuardar.Normalcolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
             this.btnGuardar.OnHovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
@@ -314,7 +316,7 @@ namespace BUDGET.DESKTOP
             this.cmbPos.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.cmbPos.ForeColor = System.Drawing.Color.Gray;
             this.cmbPos.FormattingEnabled = true;
-            this.cmbPos.Location = new System.Drawing.Point(36, 433);
+            this.cmbPos.Location = new System.Drawing.Point(36, 482);
             this.cmbPos.Name = "cmbPos";
             this.cmbPos.Size = new System.Drawing.Size(342, 21);
             this.cmbPos.TabIndex = 49;
@@ -322,7 +324,7 @@ namespace BUDGET.DESKTOP
             // chkPos
             // 
             this.chkPos.AutoSize = true;
-            this.chkPos.Location = new System.Drawing.Point(34, 403);
+            this.chkPos.Location = new System.Drawing.Point(34, 452);
             this.chkPos.Name = "chkPos";
             this.chkPos.Size = new System.Drawing.Size(124, 17);
             this.chkPos.TabIndex = 50;
@@ -330,11 +332,29 @@ namespace BUDGET.DESKTOP
             this.chkPos.UseVisualStyleBackColor = true;
             this.chkPos.CheckedChanged += new System.EventHandler(this.chkPos_CheckedChanged);
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(33, 402);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(36, 13);
+            this.label3.TabIndex = 51;
+            this.label3.Text = "DATE";
+            // 
+            // dtFecha
+            // 
+            this.dtFecha.Location = new System.Drawing.Point(34, 419);
+            this.dtFecha.Name = "dtFecha";
+            this.dtFecha.Size = new System.Drawing.Size(200, 20);
+            this.dtFecha.TabIndex = 52;
+            // 
             // FrmPos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(419, 516);
+            this.ClientSize = new System.Drawing.Size(419, 581);
+            this.Controls.Add(this.dtFecha);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.chkPos);
             this.Controls.Add(this.cmbPos);
             this.Controls.Add(this.cmbProject);
@@ -399,5 +419,7 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.ComboBox cmbProject;
         private System.Windows.Forms.ComboBox cmbPos;
         private System.Windows.Forms.CheckBox chkPos;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.DateTimePicker dtFecha;
     }
 }

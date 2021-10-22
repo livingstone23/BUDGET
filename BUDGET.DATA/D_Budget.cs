@@ -11,7 +11,7 @@ namespace BUDGET.DATA
 {
     public class D_Budget
     {
-        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["conectar4"].ConnectionString);
+        SqlConnection conexion = new SqlConnection(ConfigurationManager.ConnectionStrings["BUDGET.DESKTOP.Properties.Settings.FinanceDBConnectionString"].ConnectionString);
 
         public DataTable ListandoBudget()
         {

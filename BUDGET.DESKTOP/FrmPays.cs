@@ -41,7 +41,7 @@ namespace BUDGET.DESKTOP
             tablaPays.Columns[3].HeaderText = "Description Pos";
             tablaPays.Columns[4].HeaderText = "Number Transfer";
             tablaPays.Columns[5].HeaderText = "Pay Amount";
-            tablaPays.Columns[5].HeaderText = "Rate Change";
+            tablaPays.Columns[6].HeaderText = "Rate Change";
             tablaPays.Columns[10].HeaderText = "Initiative Name";
             tablaPays.Columns[11].HeaderText = "Project Name";
 

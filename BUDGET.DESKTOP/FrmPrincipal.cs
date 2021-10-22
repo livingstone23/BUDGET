@@ -52,8 +52,8 @@ namespace BUDGET.DESKTOP
         public void SeleccionarBotones(Bunifu.Framework.UI.BunifuFlatButton sender)
         {
             btnDashboard.Textcolor = Color.White;
-            btnFrmInitiative.Textcolor = Color.White;
-            btnProject.Textcolor = Color.White;
+            //btnFrmInitiative.Textcolor = Color.White;
+            //btnProject.Textcolor = Color.White;
             btnPOSReceived.Textcolor = Color.White;
 
             sender.selected = true;
