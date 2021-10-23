@@ -31,6 +31,8 @@ namespace BUDGET.DATA
             return tabla;
         }
 
+
+
         public void ShowTotals(E_BUDGET budget)
         {
             SqlCommand cmd = new SqlCommand("summaryTotals", conexion);
