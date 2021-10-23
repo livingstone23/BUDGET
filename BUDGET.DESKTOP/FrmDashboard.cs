@@ -1,4 +1,5 @@
 ﻿using BUDGET.BUSINESS;
+using BUDGET.ENTITIES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -20,6 +21,7 @@ namespace BUDGET.DESKTOP
             InitializeComponent();
             MostrarTablaBudget();
             accionesTAblas();
+            ShowTotal();
         }
 
 
@@ -35,6 +37,15 @@ namespace BUDGET.DESKTOP
             tablaBUDGET.Columns[4].HeaderText = "Amount Invoice";
             tablaBUDGET.Columns[8].HeaderText = "Final Balance";
 
+        }
+        public void ShowTotal()
+        {
+            N_Budget objNegocio = new N_Budget();
+            E_BUDGET objEntidad = new E_BUDGET();
+            objNegocio.SummaringTotals(objEntidad);
+            LabelInitiative.Text = objEntidad.TotalInitiative;
+            labelProject.Text = objEntidad.TotalProjects;
+            labelPos.Text = objEntidad.TotalPos;
         }
 
         public void accionesTAblas()
@@ -75,13 +86,14 @@ namespace BUDGET.DESKTOP
             FrmInitiative fini = new FrmInitiative();
             fini.Mostrar = true;
             fini.ShowDialog();
-
+            ShowTotal();
         }
 
         private void btnPos_Click(object sender, EventArgs e)
         {
             FrmPos fpos = new FrmPos();
             fpos.ShowDialog();
+            ShowTotal();
         }
 
         private void btnProject_Click(object sender, EventArgs e)
@@ -89,7 +101,7 @@ namespace BUDGET.DESKTOP
             FrmProject fpro = new FrmProject();
             fpro.Mostrar = true;
             fpro.ShowDialog();
-
+            ShowTotal();
         }
 
         private void btnExportarExcel(object sender, EventArgs e)

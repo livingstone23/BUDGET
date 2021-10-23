@@ -39,24 +39,24 @@ namespace BUDGET.DESKTOP
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel6 = new System.Windows.Forms.Panel();
-            this.label2 = new System.Windows.Forms.Label();
+            this.labelProject = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.pictureBox2 = new System.Windows.Forms.PictureBox();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel5 = new System.Windows.Forms.Panel();
-            this.label4 = new System.Windows.Forms.Label();
+            this.labelPos = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.pictureBox3 = new System.Windows.Forms.PictureBox();
-            this.btnPos = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnInitiative = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.btnProject = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
-            this.pictureBox9 = new System.Windows.Forms.PictureBox();
-            this.pictureBox4 = new System.Windows.Forms.PictureBox();
-            this.txtBuscar = new System.Windows.Forms.TextBox();
-            this.tablaBUDGET = new System.Windows.Forms.DataGridView();
             this.panel7 = new System.Windows.Forms.Panel();
+            this.tablaBUDGET = new System.Windows.Forms.DataGridView();
+            this.txtBuscar = new System.Windows.Forms.TextBox();
+            this.pictureBox4 = new System.Windows.Forms.PictureBox();
+            this.pictureBox9 = new System.Windows.Forms.PictureBox();
+            this.bunifuThinButton25 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.bunifuThinButton24 = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnProject = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnInitiative = new Bunifu.Framework.UI.BunifuThinButton2();
+            this.btnPos = new Bunifu.Framework.UI.BunifuThinButton2();
             this.flowLayoutPanel1.SuspendLayout();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
@@ -67,10 +67,10 @@ namespace BUDGET.DESKTOP
             this.panel2.SuspendLayout();
             this.panel5.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaBUDGET)).BeginInit();
             this.panel7.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaBUDGET)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).BeginInit();
             this.SuspendLayout();
             // 
             // flowLayoutPanel1
@@ -113,9 +113,9 @@ namespace BUDGET.DESKTOP
             this.LabelInitiative.ForeColor = System.Drawing.SystemColors.GrayText;
             this.LabelInitiative.Location = new System.Drawing.Point(159, 41);
             this.LabelInitiative.Name = "LabelInitiative";
-            this.LabelInitiative.Size = new System.Drawing.Size(32, 24);
+            this.LabelInitiative.Size = new System.Drawing.Size(21, 24);
             this.LabelInitiative.TabIndex = 2;
-            this.LabelInitiative.Text = "10";
+            this.LabelInitiative.Text = "0";
             // 
             // label1
             // 
@@ -152,7 +152,7 @@ namespace BUDGET.DESKTOP
             // 
             this.panel6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel6.BackgroundImage")));
             this.panel6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel6.Controls.Add(this.label2);
+            this.panel6.Controls.Add(this.labelProject);
             this.panel6.Controls.Add(this.label3);
             this.panel6.Controls.Add(this.pictureBox2);
             this.panel6.Location = new System.Drawing.Point(3, 11);
@@ -160,17 +160,17 @@ namespace BUDGET.DESKTOP
             this.panel6.Size = new System.Drawing.Size(300, 106);
             this.panel6.TabIndex = 4;
             // 
-            // label2
+            // labelProject
             // 
-            this.label2.AutoSize = true;
-            this.label2.BackColor = System.Drawing.Color.Transparent;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label2.Location = new System.Drawing.Point(182, 41);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(32, 24);
-            this.label2.TabIndex = 2;
-            this.label2.Text = "23";
+            this.labelProject.AutoSize = true;
+            this.labelProject.BackColor = System.Drawing.Color.Transparent;
+            this.labelProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelProject.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.labelProject.Location = new System.Drawing.Point(182, 41);
+            this.labelProject.Name = "labelProject";
+            this.labelProject.Size = new System.Drawing.Size(21, 24);
+            this.labelProject.TabIndex = 2;
+            this.labelProject.Text = "0";
             // 
             // label3
             // 
@@ -207,7 +207,7 @@ namespace BUDGET.DESKTOP
             // 
             this.panel5.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel5.BackgroundImage")));
             this.panel5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel5.Controls.Add(this.label4);
+            this.panel5.Controls.Add(this.labelPos);
             this.panel5.Controls.Add(this.label5);
             this.panel5.Controls.Add(this.pictureBox3);
             this.panel5.Location = new System.Drawing.Point(3, 11);
@@ -215,17 +215,17 @@ namespace BUDGET.DESKTOP
             this.panel5.Size = new System.Drawing.Size(300, 106);
             this.panel5.TabIndex = 4;
             // 
-            // label4
+            // labelPos
             // 
-            this.label4.AutoSize = true;
-            this.label4.BackColor = System.Drawing.Color.Transparent;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.ForeColor = System.Drawing.SystemColors.GrayText;
-            this.label4.Location = new System.Drawing.Point(245, 41);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(32, 24);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "58";
+            this.labelPos.AutoSize = true;
+            this.labelPos.BackColor = System.Drawing.Color.Transparent;
+            this.labelPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.labelPos.ForeColor = System.Drawing.SystemColors.GrayText;
+            this.labelPos.Location = new System.Drawing.Point(245, 41);
+            this.labelPos.Name = "labelPos";
+            this.labelPos.Size = new System.Drawing.Size(21, 24);
+            this.labelPos.TabIndex = 2;
+            this.labelPos.Text = "0";
             // 
             // label5
             // 
@@ -250,166 +250,24 @@ namespace BUDGET.DESKTOP
             this.pictureBox3.TabIndex = 0;
             this.pictureBox3.TabStop = false;
             // 
-            // btnPos
+            // panel7
             // 
-            this.btnPos.ActiveBorderThickness = 1;
-            this.btnPos.ActiveCornerRadius = 20;
-            this.btnPos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnPos.ActiveForecolor = System.Drawing.Color.White;
-            this.btnPos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnPos.BackColor = System.Drawing.SystemColors.Control;
-            this.btnPos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPos.BackgroundImage")));
-            this.btnPos.ButtonText = "NEW POS RECEIVED";
-            this.btnPos.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPos.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnPos.IdleBorderThickness = 1;
-            this.btnPos.IdleCornerRadius = 20;
-            this.btnPos.IdleFillColor = System.Drawing.Color.White;
-            this.btnPos.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnPos.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnPos.Location = new System.Drawing.Point(19, 14);
-            this.btnPos.Margin = new System.Windows.Forms.Padding(5);
-            this.btnPos.Name = "btnPos";
-            this.btnPos.Size = new System.Drawing.Size(225, 41);
-            this.btnPos.TabIndex = 0;
-            this.btnPos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnPos.Click += new System.EventHandler(this.btnPos_Click);
-            // 
-            // btnInitiative
-            // 
-            this.btnInitiative.ActiveBorderThickness = 1;
-            this.btnInitiative.ActiveCornerRadius = 20;
-            this.btnInitiative.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnInitiative.ActiveForecolor = System.Drawing.Color.White;
-            this.btnInitiative.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnInitiative.BackColor = System.Drawing.SystemColors.Control;
-            this.btnInitiative.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInitiative.BackgroundImage")));
-            this.btnInitiative.ButtonText = "INITIATIVE";
-            this.btnInitiative.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnInitiative.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnInitiative.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnInitiative.IdleBorderThickness = 1;
-            this.btnInitiative.IdleCornerRadius = 20;
-            this.btnInitiative.IdleFillColor = System.Drawing.Color.White;
-            this.btnInitiative.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnInitiative.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnInitiative.Location = new System.Drawing.Point(602, 14);
-            this.btnInitiative.Margin = new System.Windows.Forms.Padding(5);
-            this.btnInitiative.Name = "btnInitiative";
-            this.btnInitiative.Size = new System.Drawing.Size(137, 41);
-            this.btnInitiative.TabIndex = 1;
-            this.btnInitiative.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnInitiative.Click += new System.EventHandler(this.btnInitiative_Click);
-            // 
-            // btnProject
-            // 
-            this.btnProject.ActiveBorderThickness = 1;
-            this.btnProject.ActiveCornerRadius = 20;
-            this.btnProject.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnProject.ActiveForecolor = System.Drawing.Color.White;
-            this.btnProject.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.btnProject.BackColor = System.Drawing.SystemColors.Control;
-            this.btnProject.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProject.BackgroundImage")));
-            this.btnProject.ButtonText = "PROJECT";
-            this.btnProject.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnProject.ForeColor = System.Drawing.Color.SeaGreen;
-            this.btnProject.IdleBorderThickness = 1;
-            this.btnProject.IdleCornerRadius = 20;
-            this.btnProject.IdleFillColor = System.Drawing.Color.White;
-            this.btnProject.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.btnProject.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.btnProject.Location = new System.Drawing.Point(764, 14);
-            this.btnProject.Margin = new System.Windows.Forms.Padding(5);
-            this.btnProject.Name = "btnProject";
-            this.btnProject.Size = new System.Drawing.Size(138, 41);
-            this.btnProject.TabIndex = 2;
-            this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
-            // 
-            // bunifuThinButton24
-            // 
-            this.bunifuThinButton24.ActiveBorderThickness = 1;
-            this.bunifuThinButton24.ActiveCornerRadius = 20;
-            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton24.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
-            this.bunifuThinButton24.ButtonText = "EXP. EXCEL";
-            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleBorderThickness = 1;
-            this.bunifuThinButton24.IdleCornerRadius = 20;
-            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton24.Location = new System.Drawing.Point(764, 65);
-            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton24.Name = "bunifuThinButton24";
-            this.bunifuThinButton24.Size = new System.Drawing.Size(138, 41);
-            this.bunifuThinButton24.TabIndex = 3;
-            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton24.Click += new System.EventHandler(this.btnExportarExcel);
-            // 
-            // bunifuThinButton25
-            // 
-            this.bunifuThinButton25.ActiveBorderThickness = 1;
-            this.bunifuThinButton25.ActiveCornerRadius = 20;
-            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
-            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
-            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
-            this.bunifuThinButton25.ButtonText = "PRINT";
-            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.bunifuThinButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.IdleBorderThickness = 1;
-            this.bunifuThinButton25.IdleCornerRadius = 20;
-            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
-            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen;
-            this.bunifuThinButton25.Location = new System.Drawing.Point(602, 65);
-            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
-            this.bunifuThinButton25.Name = "bunifuThinButton25";
-            this.bunifuThinButton25.Size = new System.Drawing.Size(137, 41);
-            this.bunifuThinButton25.TabIndex = 4;
-            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
-            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
-            // 
-            // pictureBox9
-            // 
-            this.pictureBox9.BackColor = System.Drawing.Color.White;
-            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
-            this.pictureBox9.Location = new System.Drawing.Point(14, 70);
-            this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(391, 36);
-            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox9.TabIndex = 12;
-            this.pictureBox9.TabStop = false;
-            // 
-            // pictureBox4
-            // 
-            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
-            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
-            this.pictureBox4.Location = new System.Drawing.Point(23, 75);
-            this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(32, 24);
-            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
-            this.pictureBox4.TabIndex = 13;
-            this.pictureBox4.TabStop = false;
-            // 
-            // txtBuscar
-            // 
-            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.txtBuscar.Location = new System.Drawing.Point(59, 79);
-            this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(340, 17);
-            this.txtBuscar.TabIndex = 14;
+            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
+            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.panel7.Controls.Add(this.tablaBUDGET);
+            this.panel7.Controls.Add(this.txtBuscar);
+            this.panel7.Controls.Add(this.pictureBox4);
+            this.panel7.Controls.Add(this.pictureBox9);
+            this.panel7.Controls.Add(this.bunifuThinButton25);
+            this.panel7.Controls.Add(this.bunifuThinButton24);
+            this.panel7.Controls.Add(this.btnProject);
+            this.panel7.Controls.Add(this.btnInitiative);
+            this.panel7.Controls.Add(this.btnPos);
+            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.panel7.Location = new System.Drawing.Point(3, 137);
+            this.panel7.Name = "panel7";
+            this.panel7.Size = new System.Drawing.Size(942, 665);
+            this.panel7.TabIndex = 3;
             // 
             // tablaBUDGET
             // 
@@ -438,24 +296,166 @@ namespace BUDGET.DESKTOP
             this.tablaBUDGET.Size = new System.Drawing.Size(898, 485);
             this.tablaBUDGET.TabIndex = 15;
             // 
-            // panel7
+            // txtBuscar
             // 
-            this.panel7.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel7.BackgroundImage")));
-            this.panel7.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.panel7.Controls.Add(this.tablaBUDGET);
-            this.panel7.Controls.Add(this.txtBuscar);
-            this.panel7.Controls.Add(this.pictureBox4);
-            this.panel7.Controls.Add(this.pictureBox9);
-            this.panel7.Controls.Add(this.bunifuThinButton25);
-            this.panel7.Controls.Add(this.bunifuThinButton24);
-            this.panel7.Controls.Add(this.btnProject);
-            this.panel7.Controls.Add(this.btnInitiative);
-            this.panel7.Controls.Add(this.btnPos);
-            this.panel7.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
-            this.panel7.Location = new System.Drawing.Point(3, 137);
-            this.panel7.Name = "panel7";
-            this.panel7.Size = new System.Drawing.Size(942, 665);
-            this.panel7.TabIndex = 3;
+            this.txtBuscar.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.txtBuscar.Location = new System.Drawing.Point(59, 79);
+            this.txtBuscar.Name = "txtBuscar";
+            this.txtBuscar.Size = new System.Drawing.Size(340, 17);
+            this.txtBuscar.TabIndex = 14;
+            // 
+            // pictureBox4
+            // 
+            this.pictureBox4.BackColor = System.Drawing.SystemColors.ControlLightLight;
+            this.pictureBox4.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox4.Image")));
+            this.pictureBox4.Location = new System.Drawing.Point(23, 75);
+            this.pictureBox4.Name = "pictureBox4";
+            this.pictureBox4.Size = new System.Drawing.Size(32, 24);
+            this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox4.TabIndex = 13;
+            this.pictureBox4.TabStop = false;
+            // 
+            // pictureBox9
+            // 
+            this.pictureBox9.BackColor = System.Drawing.Color.White;
+            this.pictureBox9.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox9.Image")));
+            this.pictureBox9.Location = new System.Drawing.Point(14, 70);
+            this.pictureBox9.Name = "pictureBox9";
+            this.pictureBox9.Size = new System.Drawing.Size(391, 36);
+            this.pictureBox9.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pictureBox9.TabIndex = 12;
+            this.pictureBox9.TabStop = false;
+            // 
+            // bunifuThinButton25
+            // 
+            this.bunifuThinButton25.ActiveBorderThickness = 1;
+            this.bunifuThinButton25.ActiveCornerRadius = 20;
+            this.bunifuThinButton25.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.bunifuThinButton25.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton25.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.bunifuThinButton25.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton25.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton25.BackgroundImage")));
+            this.bunifuThinButton25.ButtonText = "PRINT";
+            this.bunifuThinButton25.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton25.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton25.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleBorderThickness = 1;
+            this.bunifuThinButton25.IdleCornerRadius = 20;
+            this.bunifuThinButton25.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton25.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton25.Location = new System.Drawing.Point(602, 65);
+            this.bunifuThinButton25.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton25.Name = "bunifuThinButton25";
+            this.bunifuThinButton25.Size = new System.Drawing.Size(137, 41);
+            this.bunifuThinButton25.TabIndex = 4;
+            this.bunifuThinButton25.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton25.Click += new System.EventHandler(this.bunifuThinButton25_Click);
+            // 
+            // bunifuThinButton24
+            // 
+            this.bunifuThinButton24.ActiveBorderThickness = 1;
+            this.bunifuThinButton24.ActiveCornerRadius = 20;
+            this.bunifuThinButton24.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.bunifuThinButton24.ActiveForecolor = System.Drawing.Color.White;
+            this.bunifuThinButton24.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.bunifuThinButton24.BackColor = System.Drawing.SystemColors.Control;
+            this.bunifuThinButton24.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("bunifuThinButton24.BackgroundImage")));
+            this.bunifuThinButton24.ButtonText = "EXP. EXCEL";
+            this.bunifuThinButton24.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.bunifuThinButton24.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.bunifuThinButton24.ForeColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleBorderThickness = 1;
+            this.bunifuThinButton24.IdleCornerRadius = 20;
+            this.bunifuThinButton24.IdleFillColor = System.Drawing.Color.White;
+            this.bunifuThinButton24.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.bunifuThinButton24.Location = new System.Drawing.Point(764, 65);
+            this.bunifuThinButton24.Margin = new System.Windows.Forms.Padding(5);
+            this.bunifuThinButton24.Name = "bunifuThinButton24";
+            this.bunifuThinButton24.Size = new System.Drawing.Size(138, 41);
+            this.bunifuThinButton24.TabIndex = 3;
+            this.bunifuThinButton24.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.bunifuThinButton24.Click += new System.EventHandler(this.btnExportarExcel);
+            // 
+            // btnProject
+            // 
+            this.btnProject.ActiveBorderThickness = 1;
+            this.btnProject.ActiveCornerRadius = 20;
+            this.btnProject.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnProject.ActiveForecolor = System.Drawing.Color.White;
+            this.btnProject.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnProject.BackColor = System.Drawing.SystemColors.Control;
+            this.btnProject.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnProject.BackgroundImage")));
+            this.btnProject.ButtonText = "PROJECT";
+            this.btnProject.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnProject.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnProject.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnProject.IdleBorderThickness = 1;
+            this.btnProject.IdleCornerRadius = 20;
+            this.btnProject.IdleFillColor = System.Drawing.Color.White;
+            this.btnProject.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnProject.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnProject.Location = new System.Drawing.Point(764, 14);
+            this.btnProject.Margin = new System.Windows.Forms.Padding(5);
+            this.btnProject.Name = "btnProject";
+            this.btnProject.Size = new System.Drawing.Size(138, 41);
+            this.btnProject.TabIndex = 2;
+            this.btnProject.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnProject.Click += new System.EventHandler(this.btnProject_Click);
+            // 
+            // btnInitiative
+            // 
+            this.btnInitiative.ActiveBorderThickness = 1;
+            this.btnInitiative.ActiveCornerRadius = 20;
+            this.btnInitiative.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnInitiative.ActiveForecolor = System.Drawing.Color.White;
+            this.btnInitiative.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnInitiative.BackColor = System.Drawing.SystemColors.Control;
+            this.btnInitiative.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnInitiative.BackgroundImage")));
+            this.btnInitiative.ButtonText = "INITIATIVE";
+            this.btnInitiative.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnInitiative.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnInitiative.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnInitiative.IdleBorderThickness = 1;
+            this.btnInitiative.IdleCornerRadius = 20;
+            this.btnInitiative.IdleFillColor = System.Drawing.Color.White;
+            this.btnInitiative.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnInitiative.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnInitiative.Location = new System.Drawing.Point(602, 14);
+            this.btnInitiative.Margin = new System.Windows.Forms.Padding(5);
+            this.btnInitiative.Name = "btnInitiative";
+            this.btnInitiative.Size = new System.Drawing.Size(137, 41);
+            this.btnInitiative.TabIndex = 1;
+            this.btnInitiative.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnInitiative.Click += new System.EventHandler(this.btnInitiative_Click);
+            // 
+            // btnPos
+            // 
+            this.btnPos.ActiveBorderThickness = 1;
+            this.btnPos.ActiveCornerRadius = 20;
+            this.btnPos.ActiveFillColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnPos.ActiveForecolor = System.Drawing.Color.White;
+            this.btnPos.ActiveLineColor = System.Drawing.Color.FromArgb(((int)(((byte)(42)))), ((int)(((byte)(110)))), ((int)(((byte)(242)))));
+            this.btnPos.BackColor = System.Drawing.SystemColors.Control;
+            this.btnPos.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnPos.BackgroundImage")));
+            this.btnPos.ButtonText = "NEW POS RECEIVED";
+            this.btnPos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnPos.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnPos.ForeColor = System.Drawing.Color.SeaGreen;
+            this.btnPos.IdleBorderThickness = 1;
+            this.btnPos.IdleCornerRadius = 20;
+            this.btnPos.IdleFillColor = System.Drawing.Color.White;
+            this.btnPos.IdleForecolor = System.Drawing.Color.SeaGreen;
+            this.btnPos.IdleLineColor = System.Drawing.Color.SeaGreen;
+            this.btnPos.Location = new System.Drawing.Point(19, 14);
+            this.btnPos.Margin = new System.Windows.Forms.Padding(5);
+            this.btnPos.Name = "btnPos";
+            this.btnPos.Size = new System.Drawing.Size(225, 41);
+            this.btnPos.TabIndex = 0;
+            this.btnPos.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
+            this.btnPos.Click += new System.EventHandler(this.btnPos_Click);
             // 
             // FrmDashboard
             // 
@@ -479,11 +479,11 @@ namespace BUDGET.DESKTOP
             this.panel5.ResumeLayout(false);
             this.panel5.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.tablaBUDGET)).EndInit();
             this.panel7.ResumeLayout(false);
             this.panel7.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.tablaBUDGET)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox4)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox9)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -494,11 +494,11 @@ namespace BUDGET.DESKTOP
         private System.Windows.Forms.Panel panel3;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.Panel panel6;
-        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label labelProject;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.PictureBox pictureBox2;
         private System.Windows.Forms.Panel panel5;
-        private System.Windows.Forms.Label label4;
+        private System.Windows.Forms.Label labelPos;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.PictureBox pictureBox3;
         private System.Windows.Forms.Panel panel1;
