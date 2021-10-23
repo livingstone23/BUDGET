@@ -14,6 +14,9 @@ namespace BUDGET.DESKTOP
 {
     public partial class FrmPays : Form
     {
+
+        E_POSPay oEntidad = new E_POSPay();
+        N_POSPay oPosPay = new N_POSPay();
         public FrmPays()
         {
             InitializeComponent();
@@ -65,6 +68,47 @@ namespace BUDGET.DESKTOP
         private void txtBuscar_TextChanged(object sender, EventArgs e)
         {
             ListarPos(txtBuscar.Text);
+        }
+
+        private void btnEditarPos_Click(object sender, EventArgs e)
+        {
+            if (tablaPays.SelectedRows.Count > 0)
+            {
+                //guardamos los valores en objeto entidad
+                E_POSPay oPos = new E_POSPay();
+                oPos.IdPOSPays = Convert.ToInt32(tablaPays.CurrentRow.Cells[0].Value.ToString());
+                oPos.PayDay = (DateTime)tablaPays.CurrentRow.Cells[1].Value;
+                oPos.DescriptionPOS= tablaPays.CurrentRow.Cells[3].Value.ToString();
+                oPos.NumberTransfer = tablaPays.CurrentRow.Cells[4].Value.ToString();
+                oPos.PayAmount = Convert.ToDecimal(tablaPays.CurrentRow.Cells[5].Value);
+                oPos.IdProject = Convert.ToInt32(tablaPays.CurrentRow.Cells[7].Value);
+                oPos.IdInitiative = Convert.ToInt32(tablaPays.CurrentRow.Cells[8].Value);
+                if (tablaPays.CurrentRow.Cells[9].Value.ToString() != ""){
+                    
+                    oPos.IdPOSPaysAdjust = Convert.ToInt32(tablaPays.CurrentRow.Cells[9].Value.ToString());
+                }
+                FrmPos fpos = new FrmPos(oPos);
+                fpos.bEditar = true;
+                fpos.ShowDialog();
+
+            }
+     
+            
+        }
+     
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            if (tablaPays.SelectedRows.Count > 0)
+            {
+                //guardamos los valores en objeto entidad
+                int idPosPay = Convert.ToInt32(tablaPays.CurrentRow.Cells[0].Value.ToString());
+               if(idPosPay != 0)
+               {
+                    oPosPay.DeletingProducts(idPosPay);
+               }
+                ListarPos("");
+            }
         }
     }
 }

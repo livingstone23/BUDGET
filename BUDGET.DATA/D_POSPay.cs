@@ -55,7 +55,7 @@ namespace BUDGET.DATA
             cmd.CommandType = CommandType.StoredProcedure;
             conexion.Open();
 
-            cmd.Parameters.AddWithValue("@id", idPosPay);
+            cmd.Parameters.AddWithValue("@idPosPay", idPosPay);
 
             cmd.ExecuteNonQuery();
             conexion.Close();

@@ -70,7 +70,7 @@ namespace BUDGET.DESKTOP
                     objEntidad.InitiativeDescription = txtDescripcion.Text.ToUpper();
 
                     objNegocio.InsertInitiative(objEntidad);
-                    MessageBox.Show("Se guardo registro");
+                    MessageBox.Show("New Initiative created");
                     mostrarBuscarTabla("");
                     limpiarCajas();
                 }
@@ -141,16 +141,41 @@ namespace BUDGET.DESKTOP
         {
             if(tablaCategoria.SelectedRows.Count > 0)
             {
-                objEntidad.IdInitiative =Convert.ToInt32(tablaCategoria.CurrentRow.Cells[0].Value.ToString());
-                objNegocio.DeleteInitiative(objEntidad);
 
-                MessageBox.Show("Se elimino correctamente");
-                mostrarBuscarTabla("");
+                //comprobamos si la iniciativa tiene un proyecto asociado
+                N_Project oProject = new N_Project();
+                List<E_Project> ltProjects = new List<E_Project>();
+
+                objEntidad.IdInitiative =Convert.ToInt32(tablaCategoria.CurrentRow.Cells[0].Value.ToString());
+                objEntidad.InitiativeName = tablaCategoria.CurrentRow.Cells[1].Value.ToString();
+                ltProjects = oProject.getProyectoPorIniciativa(objEntidad.IdInitiative.ToString());
+
+                if (ltProjects.Count > 0)
+                {
+                    MessageBox.Show("A Initiative with Project associated can not be deleted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                else
+                {
+                    DialogResult result = MessageBox.Show($"Are you sure you want to delete {objEntidad.InitiativeName} Initiative? ", "DELETE", MessageBoxButtons.YesNo, MessageBoxIcon.Warning);
+
+                    if (result == DialogResult.Yes)
+                    {
+
+                        objNegocio.DeleteInitiative(objEntidad);
+                        mostrarBuscarTabla("");
+                    }
+                }
+                //liberamos memoria
+                oProject = null;
+                ltProjects.Clear();
+                ltProjects = null;
             }
             else
             {
                 MessageBox.Show("Seleccione la fila que desea eliminar");
             }
+           
+           
         }
 
         private void bunifuFlatButton3_Click(object sender, EventArgs e)

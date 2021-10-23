@@ -16,9 +16,10 @@ namespace BUDGET.DESKTOP
     {
        
         N_POSPay business = new N_POSPay();
-
-        public bool Update = false;
+        E_POSPay _oPosPay = new E_POSPay();
+        public bool bEditar { get; set; }
         private bool _pChecked;
+        
         private bool PosChecked
         {
           get;set;
@@ -30,15 +31,48 @@ namespace BUDGET.DESKTOP
             InitializeComponent();
          
         }
+        public FrmPos(E_POSPay oPosPay)
+        {
+            _oPosPay = oPosPay;
+            InitializeComponent();
+            
+            //se va a editar el pos
+           
+        }
         private void FrmPos_Load(object sender, EventArgs e)
         {
+
             ListInitiative();
             // ListProject();
             ListPos();
-            PosChecked = false;
-            chkPos.Checked = PosChecked;
-            pictureBoxPos.Visible = false;
-            cmbPos.Visible = false;
+            if (bEditar)
+            {
+                //obtenemos el objeto del pago
+                txtDescription.Text = _oPosPay.DescriptionPOS;
+                txtNumberTransfer.Text = _oPosPay.NumberTransfer;
+                txtPayAmount.Text = _oPosPay.PayAmount.ToString();
+                dtFecha.Value = _oPosPay.PayDay;
+                if(_oPosPay.IdPOSPaysAdjust != 0)
+                {
+
+                }
+                else
+                {
+                    PosChecked = false;
+                    chkPos.Checked = PosChecked;
+                    pictureBoxPos.Visible = false;
+                    cmbPos.Visible = false;
+                }
+            }
+            else
+            {
+                PosChecked = false;
+                chkPos.Checked = PosChecked;
+                pictureBoxPos.Visible = false;
+                cmbPos.Visible = false;
+            }
+         
+            
         }
         private void cerrarFormulario_Click(object sender, EventArgs e)
         {
@@ -49,7 +83,7 @@ namespace BUDGET.DESKTOP
         {
             bool bguardar = true;
             string stBox = "";
-            if(Update == false)
+            if(!bEditar)
             {
                 try
                 {
@@ -105,17 +139,12 @@ namespace BUDGET.DESKTOP
                     MessageBox.Show("No se pudo guardar POS" + ex);
                 }
             }
-            if (Update == true)
+            else
             {
-                try
-                {
-
-                }
-                catch (Exception ex)
-                {
-                    MessageBox.Show("No se pudo editar POS" + ex);
-                }
+                
+                //TODO editar
             }
+    
         }
 
         public void ListInitiative()
