@@ -1,4 +1,5 @@
-﻿using System;
+﻿using BUDGET.ENTITIES;
+using System;
 using System.Collections.Generic;
 using System.Configuration;
 using System.Data;
@@ -28,6 +29,37 @@ namespace BUDGET.DATA
             conexion.Close();
 
             return tabla;
+        }
+
+
+
+        public void ShowTotals(E_BUDGET budget)
+        {
+            SqlCommand cmd = new SqlCommand("summaryTotals", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+
+            SqlParameter totalInitiative = new SqlParameter("@totalInitiative", 0);
+            totalInitiative.Direction = ParameterDirection.Output;
+
+            SqlParameter totalProjects = new SqlParameter("@totalProjects", 0);
+            totalProjects.Direction = ParameterDirection.Output;
+
+            SqlParameter totalProducts = new SqlParameter("@totalPos", 0);
+            totalProducts.Direction = ParameterDirection.Output;
+
+
+            cmd.Parameters.Add(totalInitiative);
+            cmd.Parameters.Add(totalProjects);
+            cmd.Parameters.Add(totalProducts);
+            conexion.Open();
+
+            cmd.ExecuteNonQuery();
+
+            budget.TotalInitiative = cmd.Parameters["@totalInitiative"].Value.ToString();
+            budget.TotalProjects = cmd.Parameters["@totalProjects"].Value.ToString();
+            budget.TotalPos = cmd.Parameters["@totalPos"].Value.ToString();
+
+            conexion.Close();
         }
 
     }
