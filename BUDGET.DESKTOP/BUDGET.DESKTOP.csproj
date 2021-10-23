@@ -205,10 +205,6 @@
       <Project>{8b384d1d-51ab-48fc-9d47-814cd1d4c3b4}</Project>
       <Name>BUDGET.BUSINESS</Name>
     </ProjectReference>
-    <ProjectReference Include="..\BUDGET.DATA\BUDGET.DATA.csproj">
-      <Project>{C8E32420-E2BC-46A5-A304-23E7ED85064B}</Project>
-      <Name>BUDGET.DATA</Name>
-    </ProjectReference>
     <ProjectReference Include="..\BUDGET.ENTITIES\BUDGET.ENTITIES.csproj">
       <Project>{4cf95194-2256-4b04-9a94-b697f1e32155}</Project>
       <Name>BUDGET.ENTITIES</Name>
@@ -232,6 +228,13 @@
     </BootstrapperPackage>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="DataBase\FinanceDB.mdf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="DataBase\FinanceDB_log.ldf">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+      <DependentUpon>FinanceDB.mdf</DependentUpon>
+    </Content>
     <Content Include="Imagenes\BordeSombreado1.png" />
     <Content Include="Imagenes\BordeSombreado2.png" />
     <Content Include="Imagenes\BordeSombreado3.png" />

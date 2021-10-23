@@ -1,6 +1,4 @@
 ﻿using BUDGET.BUSINESS;
-using BUDGET.DATA;
-using BUDGET.ENTITIES;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel;
@@ -16,7 +14,6 @@ namespace BUDGET.DESKTOP
     public partial class FrmDashboard : Form
     {
         N_Budget objNegocio = new N_Budget();
-        E_BUDGET budget = new E_BUDGET();
 
         public FrmDashboard()
         {
@@ -37,11 +34,6 @@ namespace BUDGET.DESKTOP
             tablaBUDGET.Columns[3].HeaderText = "Project";
             tablaBUDGET.Columns[4].HeaderText = "Amount Invoice";
             tablaBUDGET.Columns[8].HeaderText = "Final Balance";
-
-            objNegocio.SummaringTotals(budget);
-            this.LabelInitiative.Text = budget.TotalInitiative;
-            this.label2.Text = budget.TotalProjects;
-            this.label4.Text = budget.TotalPos;
 
         }
 
