@@ -53,7 +53,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <PropertyGroup>
-    <ManifestCertificateThumbprint>1D2B78E36F5E3F4ABBCB2B2B05A49CF8947AD01F</ManifestCertificateThumbprint>
+    <ManifestCertificateThumbprint>4728EDF9C9E3229C6CA0BFD5CEF413F31A68E71B</ManifestCertificateThumbprint>
   </PropertyGroup>
   <PropertyGroup>
     <ManifestKeyFile>BUDGET.DESKTOP_TemporaryKey.pfx</ManifestKeyFile>
@@ -175,7 +175,6 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <None Include="BUDGET.DESKTOP_TemporaryKey.pfx" />
     <None Include="FinanceDBDataSet.xsc">
       <DependentUpon>FinanceDBDataSet.xsd</DependentUpon>
     </None>
