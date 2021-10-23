@@ -19,6 +19,10 @@ namespace BUDGET.ENTITIES
         private decimal finalBalance;
         private string notes;
 
+        private string totalInitiative;
+        private string totalProjects;
+        private string totalPos;
+
         public int IdInitiative { get => _IdInitiative; set => _IdInitiative = value; }
         public string InitiativeName { get => _InitiativeName; set => _InitiativeName = value; }
         public int IdProject { get => _IdProject; set => _IdProject = value; }
@@ -29,5 +33,10 @@ namespace BUDGET.ENTITIES
         public decimal Adjustment { get => adjustment; set => adjustment = value; }
         public decimal FinalBalance { get => finalBalance; set => finalBalance = value; }
         public string Notes { get => notes; set => notes = value; }
+        
+
+        public string TotalInitiative { get => totalInitiative; set => totalInitiative = value; }
+        public string TotalProjects { get => totalProjects; set => totalProjects = value; }
+        public string TotalPos { get => totalPos; set => totalPos = value; }
     }
 }

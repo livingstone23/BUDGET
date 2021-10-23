@@ -1,4 +1,5 @@
 ﻿using BUDGET.DATA;
+using BUDGET.ENTITIES;
 using System;
 using System.Collections.Generic;
 using System.Data;
@@ -16,5 +17,11 @@ namespace BUDGET.BUSINESS
         {
             return objDato.ListandoBudget();
         }
+
+        public void SummaringTotals(E_BUDGET budget)
+        {
+            objDato.ShowTotals(budget);
+        }
+
     }
 }
