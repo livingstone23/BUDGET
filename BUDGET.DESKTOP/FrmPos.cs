@@ -45,6 +45,7 @@ namespace BUDGET.DESKTOP
             ListInitiative();
             // ListProject();
             ListPos();
+     
             if (bEditar)
             {
                 //obtenemos el objeto del pago

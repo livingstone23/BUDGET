@@ -48,6 +48,7 @@ namespace BUDGET.DESKTOP
             tablaPays.Columns[10].HeaderText = "Initiative Name";
             tablaPays.Columns[11].HeaderText = "Project Name";
 
+            tablaPays.Columns[5].DefaultCellStyle.Format = "c";
         }
         private void ListarPos(string buscar)
         {
