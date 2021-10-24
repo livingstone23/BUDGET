@@ -74,6 +74,7 @@ namespace BUDGET.DESKTOP
         {
             if (tablaPays.SelectedRows.Count > 0)
             {
+                bool bAjuste = false; ;
                 //guardamos los valores en objeto entidad
                 E_POSPay oPos = new E_POSPay();
                 oPos.IdPOSPays = Convert.ToInt32(tablaPays.CurrentRow.Cells[0].Value.ToString());
@@ -81,19 +82,22 @@ namespace BUDGET.DESKTOP
                 oPos.DescriptionPOS= tablaPays.CurrentRow.Cells[3].Value.ToString();
                 oPos.NumberTransfer = tablaPays.CurrentRow.Cells[4].Value.ToString();
                 oPos.PayAmount = Convert.ToDecimal(tablaPays.CurrentRow.Cells[5].Value);
-                oPos.IdProject = Convert.ToInt32(tablaPays.CurrentRow.Cells[7].Value);
-                oPos.IdInitiative = Convert.ToInt32(tablaPays.CurrentRow.Cells[8].Value);
+                oPos.IdInitiative = Convert.ToInt32(tablaPays.CurrentRow.Cells[7].Value);
+                oPos.IdProject = Convert.ToInt32(tablaPays.CurrentRow.Cells[8].Value);
+
                 if (tablaPays.CurrentRow.Cells[9].Value.ToString() != ""){
                     
                     oPos.IdPOSPaysAdjust = Convert.ToInt32(tablaPays.CurrentRow.Cells[9].Value.ToString());
+                    bAjuste = true;
                 }
                 FrmPos fpos = new FrmPos(oPos);
+                if (bAjuste)
+                    fpos.PosChecked = true;
                 fpos.bEditar = true;
                 fpos.ShowDialog();
-
+                ListarPos("");
+                bAjuste = false;
             }
-     
-            
         }
      
 

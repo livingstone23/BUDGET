@@ -60,7 +60,26 @@ namespace BUDGET.DATA
             cmd.ExecuteNonQuery();
             conexion.Close();
         }
+        public void EditPosPay(E_POSPay posPay)
+        {
+            SqlCommand cmd = new SqlCommand("SP_EDITPOS", conexion);
+            cmd.CommandType = CommandType.StoredProcedure;
+            conexion.Open();
+            cmd.Parameters.AddWithValue("@IdPosPay", posPay.IdPOSPays);
+            cmd.Parameters.AddWithValue("@payDay", posPay.PayDay);
+            cmd.Parameters.AddWithValue("@currencyPay", posPay.CurrencyPay);
+            cmd.Parameters.AddWithValue("@descriptionPos", posPay.DescriptionPOS);
+            cmd.Parameters.AddWithValue("@numberTransfer", posPay.NumberTransfer);
+            cmd.Parameters.AddWithValue("@payAmount", posPay.PayAmount);
+            cmd.Parameters.AddWithValue("@rateChange", posPay.RateChange);
 
+            cmd.Parameters.AddWithValue("@idInitiative", posPay.IdInitiative);
+            cmd.Parameters.AddWithValue("@idProject", posPay.IdProject);
+            cmd.Parameters.AddWithValue("@idPOSPosPayAdjust", posPay.IdPOSPaysAdjust);
+
+            cmd.ExecuteNonQuery();
+            conexion.Close();
+        }
         public void CreatePOSPay(E_POSPay posPay)
         {
             SqlCommand cmd = new SqlCommand("SP_createPOSPay", conexion);

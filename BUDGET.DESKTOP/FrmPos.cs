@@ -20,7 +20,7 @@ namespace BUDGET.DESKTOP
         public bool bEditar { get; set; }
         private bool _pChecked;
         
-        private bool PosChecked
+        public bool PosChecked
         {
           get;set;
         }
@@ -52,9 +52,12 @@ namespace BUDGET.DESKTOP
                 txtNumberTransfer.Text = _oPosPay.NumberTransfer;
                 txtPayAmount.Text = _oPosPay.PayAmount.ToString();
                 dtFecha.Value = _oPosPay.PayDay;
+                cmbInitiative.SelectedValue = _oPosPay.IdInitiative;
+                cmbProject.SelectedValue = _oPosPay.IdProject;
                 if(_oPosPay.IdPOSPaysAdjust != 0)
                 {
-
+                    cmbPos.SelectedValue = _oPosPay.IdPOSPaysAdjust;
+                    chkPos.Checked = PosChecked;
                 }
                 else
                 {
@@ -130,8 +133,6 @@ namespace BUDGET.DESKTOP
                     {
                         MessageBox.Show($"{stBox} box cannot be empty", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     }
-                    
-    
 
                 }
                 catch (Exception ex)
@@ -141,8 +142,33 @@ namespace BUDGET.DESKTOP
             }
             else
             {
-                
-                //TODO editar
+                try
+                {
+                    //guardamos objeto editado
+                    E_POSPay entities = new E_POSPay();
+                    entities.IdPOSPays = _oPosPay.IdPOSPays;
+                    entities.PayDay = dtFecha.Value;
+                    entities.CurrencyPay = "EURO";
+                    entities.DescriptionPOS = txtDescription.Text;
+                    entities.NumberTransfer = txtNumberTransfer.Text;
+                    entities.PayAmount = Convert.ToDecimal(txtPayAmount.Text);
+                    entities.RateChange = 1;
+                    entities.IdInitiative = Convert.ToInt32(cmbInitiative.SelectedValue);
+                    entities.IdProject = Convert.ToInt32(cmbProject.SelectedValue);
+                    if (PosChecked)
+                    {
+                        entities.IdPOSPaysAdjust = Convert.ToInt32(cmbPos.SelectedValue);
+                        
+                    }
+                    business.EditPosPay(entities);
+                    bEditar = false;
+                    MessageBox.Show("Pos Pay edited successfully", "Ok", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    this.Close();
+                }
+                catch(Exception ex)
+                {
+                    MessageBox.Show(ex.ToString(), "ERROR", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
             }
     
         }

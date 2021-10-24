@@ -29,7 +29,10 @@ namespace BUDGET.BUSINESS
         {
             data.CreatePOSPay(posPay);
         }
-
+        public void EditPosPay(E_POSPay posPay)
+        {
+            data.EditPosPay(posPay);
+        }
         public void DeletingProducts(int id)
         {
             data.DeletePOSPay(id);
