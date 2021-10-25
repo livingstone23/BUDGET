@@ -36,7 +36,7 @@ namespace BUDGET.DESKTOP
             tablaPays.Columns[7].Visible = false;
             tablaPays.Columns[8].Visible = false;
             tablaPays.Columns[9].Visible = false;
-            tablaPays.Columns[12].Visible = false;
+            tablaPays.Columns[12].Visible = true;
             this.tablaPays.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //cambiamos nombres de headers
             tablaPays.Columns[1].HeaderText = "Pay Day";

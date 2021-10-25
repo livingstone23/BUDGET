@@ -111,6 +111,7 @@ namespace BUDGET.DESKTOP
                         stBox = "Amount";
                     }
 
+                    
                     if (bguardar)
                     {
                         E_POSPay entities = new E_POSPay();
