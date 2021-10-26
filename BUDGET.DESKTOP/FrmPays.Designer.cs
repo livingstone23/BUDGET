@@ -30,7 +30,7 @@ namespace BUDGET.DESKTOP
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FrmPays));
-            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
+            System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle1 = new System.Windows.Forms.DataGridViewCellStyle();
             this.TopFormulario = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
@@ -92,21 +92,21 @@ namespace BUDGET.DESKTOP
             this.tablaPays.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleVertical;
             this.tablaPays.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.tablaPays.ColumnHeadersVisible = false;
-            dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
-            dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
-            dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            dataGridViewCellStyle2.ForeColor = System.Drawing.Color.Gray;
-            dataGridViewCellStyle2.Padding = new System.Windows.Forms.Padding(5);
-            dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
-            dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.White;
-            dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.tablaPays.DefaultCellStyle = dataGridViewCellStyle2;
+            dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
+            dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Window;
+            dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            dataGridViewCellStyle1.ForeColor = System.Drawing.Color.Gray;
+            dataGridViewCellStyle1.Padding = new System.Windows.Forms.Padding(5);
+            dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(99)))), ((int)(((byte)(177)))));
+            dataGridViewCellStyle1.SelectionForeColor = System.Drawing.Color.White;
+            dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
+            this.tablaPays.DefaultCellStyle = dataGridViewCellStyle1;
             this.tablaPays.Location = new System.Drawing.Point(11, 144);
             this.tablaPays.Name = "tablaPays";
             this.tablaPays.ReadOnly = true;
             this.tablaPays.RowHeadersVisible = false;
             this.tablaPays.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.tablaPays.Size = new System.Drawing.Size(1039, 446);
+            this.tablaPays.Size = new System.Drawing.Size(1052, 446);
             this.tablaPays.TabIndex = 13;
             // 
             // txtBuscar

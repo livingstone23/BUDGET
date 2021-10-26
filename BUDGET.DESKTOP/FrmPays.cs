@@ -36,7 +36,7 @@ namespace BUDGET.DESKTOP
             tablaPays.Columns[7].Visible = false;
             tablaPays.Columns[8].Visible = false;
             tablaPays.Columns[9].Visible = false;
-            tablaPays.Columns[12].Visible = true;
+            tablaPays.Columns[12].Visible = false;
             this.tablaPays.DefaultCellStyle.WrapMode = DataGridViewTriState.True;
             //cambiamos nombres de headers
             tablaPays.Columns[1].HeaderText = "Pay Day";
@@ -47,6 +47,7 @@ namespace BUDGET.DESKTOP
             tablaPays.Columns[6].HeaderText = "Rate Change";
             tablaPays.Columns[10].HeaderText = "Initiative Name";
             tablaPays.Columns[11].HeaderText = "Project Name";
+            
 
             tablaPays.Columns[5].DefaultCellStyle.Format = "c";
         }
@@ -107,11 +108,28 @@ namespace BUDGET.DESKTOP
             if (tablaPays.SelectedRows.Count > 0)
             {
                 //guardamos los valores en objeto entidad
+
+                
+                
+                
+                 DataTable t =  oPosPay.ListingPosPay("");
+                List<int?> ltIds = t.AsEnumerable().Select(x => x.Field<int?>("IdPOSPaysAdjust")).ToList();
+               
+
+
                 int idPosPay = Convert.ToInt32(tablaPays.CurrentRow.Cells[0].Value.ToString());
+
                if(idPosPay != 0)
                {
-                    oPosPay.DeletingProducts(idPosPay);
-               }
+                    if (ltIds.Count > 0 && !ltIds.Contains(idPosPay))
+                    {
+                        oPosPay.DeletingProducts(idPosPay);
+                    }
+                    else
+                    {
+                        MessageBox.Show("A Adjustment with PO associated can not be deleted", "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
                 ListarPos("");
             }
         }

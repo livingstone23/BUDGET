@@ -129,7 +129,8 @@ namespace BUDGET.DESKTOP
                         } 
 
                         business.CreatingPOSPay(entities);
-                        MessageBox.Show("POS  GUARDADO");
+                        MessageBox.Show("New PO created");
+                        this.Close();
                     }
                     else
                     {
@@ -139,7 +140,7 @@ namespace BUDGET.DESKTOP
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("No se pudo guardar POS" + ex);
+                    MessageBox.Show("PO can not be saved" + ex);
                 }
             }
             else
